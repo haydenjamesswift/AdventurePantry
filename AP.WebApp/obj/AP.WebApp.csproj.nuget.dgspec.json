@@ -4,6 +4,197 @@
     "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/AP.WebApp.csproj": {}
   },
   "projects": {
+    "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj",
+        "projectName": "AP.CoreBusiness",
+        "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj",
+        "packagesPath": "/Users/haydenswift/.nuget/packages/",
+        "outputPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/haydenswift/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/AP.Plugins.InMemory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/AP.Plugins.InMemory.csproj",
+        "projectName": "AP.Plugins.InMemory",
+        "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/AP.Plugins.InMemory.csproj",
+        "packagesPath": "/Users/haydenswift/.nuget/packages/",
+        "outputPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/haydenswift/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj"
+              },
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj",
+        "projectName": "AP.UseCases",
+        "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj",
+        "packagesPath": "/Users/haydenswift/.nuget/packages/",
+        "outputPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/haydenswift/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/AP.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +217,17 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj"
+              },
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/AP.Plugins.InMemory.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.Plugins/AP.Plugins.InMemory/AP.Plugins.InMemory.csproj"
+              },
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

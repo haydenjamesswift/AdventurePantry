@@ -1,0 +1,15 @@
+.page[b-wdlert2h60] {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-container[b-wdlert2h60] {
+    flex: 1;
+}
+
+#blazor-error-ui[b-wdlert2h60] {
+    display: none;
+}

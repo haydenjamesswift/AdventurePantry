@@ -55,3 +55,7 @@ build_metadata.AdditionalFiles.CssScope = b-wdlert2h60
 [/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-3t6m41jbm5
+
+[/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Components/Pages/ProductManager/ViewProducts/ViewProductsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0TWFuYWdlci9WaWV3UHJvZHVjdHMvVmlld1Byb2R1Y3RzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9aipi5ttj2

@@ -1,0 +1,47 @@
+﻿@page "/product-manager"
+@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Products.Interfaces
+
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+
+<h1>Product Manager</h1>
+<br/>
+
+@if (products is not null && products.Count > 0) {
+    <table class="products-table">
+        <thead>
+            <tr>
+                <th>ProductID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prod in products) {
+                <tr>
+                    <td>@prod.ProductId</td>
+                    <td>@prod.ProductName</td>
+                    <td>@prod.Quantity</td>
+                    <td>@prod.Price</td>
+                    <td>
+                        <button>Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    // Define products
+    private List<Product>? products;
+
+    // Get products
+    protected override async Task OnInitializedAsync() {
+        products = (await ViewProductsByNameUseCase.ExecuteAsync()).ToList();
+    }
+}
