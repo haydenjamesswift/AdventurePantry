@@ -1,0 +1,6 @@
+{
+    "dotnet.defaultSolution": "AP.sln",
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}
