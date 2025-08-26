@@ -1,0 +1,91 @@
+/* ---------------- Container Styles ---------------- */
+.inner-container {
+    flex: 1;    
+    height: 100%;
+    border: solid green;
+}
+
+.page-title-container {
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.page-title-container h1 {
+    font-size: 1.4rem;
+    color: #111;
+}
+
+/* ---------------- Products Table ---------------- */
+.products-table {
+    width: 100%;
+}
+
+.products-table thead tr {
+    border-bottom: 3px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.products-table tbody tr {
+    border-bottom: 1px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+
+.products-table tr th,
+.products-table tr td {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-table tr th:nth-child(2),
+.products-table tr td:nth-child(2) {
+    justify-content: left;
+    flex: 3;
+}
+
+.products-table button {
+    border: 1px solid var(--van-dyke);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--van-dyke);
+    background-color: var(--timberwolf);
+}
+
+.products-table button a {
+    text-decoration: none;
+    color: var(--van-dyke);    
+}
+
+
+/* ---------------- Add Item Button ---------------- */
+.add-item-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+.add-item-button-container button {
+    padding: 0.75rem;
+    color: var(--tea-green);
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.add-item-button-container button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--van-dyke);
+}
+
+
+
+
+

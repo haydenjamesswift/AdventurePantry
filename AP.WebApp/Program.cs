@@ -18,6 +18,8 @@ builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 // Add Use Cases
 builder.Services.AddTransient<IViewProductsByNameUseCase, ViewProductsByNameUseCase>();
 builder.Services.AddTransient<IAddProductUseCase, AddProductUseCase>();
+builder.Services.AddTransient<IEditProductUseCase, EditProductUseCase>();
+builder.Services.AddTransient<IFetchProductByIdUseCase, FetchProductByIdUseCase>();
 
 var app = builder.Build();
 

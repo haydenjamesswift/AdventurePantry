@@ -1,0 +1,35 @@
+.header-main-container[b-zf7f9x2td9] {
+    width: 100%;
+    max-height: 6rem;
+    background-color: var(--tea-green);
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img[b-zf7f9x2td9] {
+    max-width: 5rem;
+}
+
+.nav-menu-desktop[b-zf7f9x2td9] {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-desktop a[b-zf7f9x2td9] {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+.nav-menu-desktop button[b-zf7f9x2td9] {
+    margin-left: 2rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    color: var(--van-dyke);
+    background-color: var(--ash-grey);
+    border: none;
+}

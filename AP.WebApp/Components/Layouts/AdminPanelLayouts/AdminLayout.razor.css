@@ -1,0 +1,55 @@
+.admin-panel-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel-content-area {
+    flex: 1;
+    display: flex;
+}
+
+
+.admin-panel-side-bar {
+    min-width: 300px;
+    background-color: #eee;
+}
+
+.side-bar-title-container {
+    padding: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.side-bar-title-container h1 {
+    font-size: 1rem;
+}
+
+.side-bar-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Normal state */
+.side-bar-link {
+     color: black;
+    text-decoration: none;
+}
+
+/* Hover state */
+.side-bar-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Active state */
+.side-bar-link.active {
+    color: black;
+    text-decoration: none;
+}
+
+.admin-panel-content {
+    flex: 1;
+}

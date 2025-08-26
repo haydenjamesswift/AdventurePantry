@@ -1,0 +1,50 @@
+﻿<!-- Imports -->
+@using AP.WebApp.Components.Items
+@using AP.WebApp.Components.Layouts
+@using Microsoft.AspNetCore.Components.Routing
+@inherits LayoutComponentBase
+
+<!-- Page Definition -->
+@page "/admin"
+
+<!-- HTML -->
+<div class="admin-panel-container">
+
+    <!-- Header -->
+    <HeaderMain></HeaderMain>
+
+    <div class="admin-panel-content-area">
+
+        <!-- Side Bar -->
+        <div class="admin-panel-side-bar">
+            <div class="side-bar-title-container">
+                <h1>Admin Panel</h1>
+            </div>
+            <div class="side-bar-content-container">
+                <div class="side-bar-item">
+                    <a class="side-bar-link" href="/admin/dashboard">Dashboard</a>
+                </div>
+                <div class="side-bar-item">
+                    <a class="side-bar-link" href="/admin/view-products">Users</a>
+                </div>
+                <div class="side-bar-item">
+                    <a class="side-bar-link" href="/admin/settings">Settings</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Content Area -->
+        <div class="admin-panel-content">
+            @Body
+        </div>
+
+
+    </div>
+
+</div>
+
+
+@code {
+
+}
