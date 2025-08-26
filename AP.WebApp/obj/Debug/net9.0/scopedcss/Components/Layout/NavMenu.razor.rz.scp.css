@@ -1,5 +1,5 @@
 .header-container[b-3t6m41jbm5] {
-    background-color: #2b2e40;
+    background-color: var(--van-dyke);
     display: flex;
     justify-content: space-between;
     padding: 0 3rem;
@@ -9,7 +9,7 @@
 .logo-container a[b-3t6m41jbm5] {
     font-size: 2rem;
     text-decoration: none;
-    color: white;
+    color: var(--timberwolf);
 }
 
 .nav-container[b-3t6m41jbm5] {
@@ -18,6 +18,6 @@
 
 .nav-item[b-3t6m41jbm5] {
     margin: 2rem;
-    color: white;
+    color: var(--timberwolf);
 }
 

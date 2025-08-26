@@ -1,6 +1,7 @@
 using AP.Plugins.InMemory;
 using AP.UseCases;
 using AP.UseCases.PluginInterfaces;
+using AP.UseCases.Products;
 using AP.UseCases.Products.Interfaces;
 using AP.WebApp.Components;
 
@@ -16,6 +17,7 @@ builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 
 // Add Use Cases
 builder.Services.AddTransient<IViewProductsByNameUseCase, ViewProductsByNameUseCase>();
+builder.Services.AddTransient<IAddProductUseCase, AddProductUseCase>();
 
 var app = builder.Build();
 

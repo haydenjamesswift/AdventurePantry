@@ -1,7 +1,6 @@
 /* _content/AP.WebApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-wdlert2h60] {
     width: 100%;
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -9,14 +8,20 @@
 
 .main-container[b-wdlert2h60] {
     flex: 1;
+    padding: 0 3rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--timberwolf);
 }
+
 
 #blazor-error-ui[b-wdlert2h60] {
     display: none;
 }
 /* _content/AP.WebApp/Components/Layout/NavMenu.razor.rz.scp.css */
 .header-container[b-3t6m41jbm5] {
-    background-color: #2b2e40;
+    background-color: var(--van-dyke);
     display: flex;
     justify-content: space-between;
     padding: 0 3rem;
@@ -26,7 +31,7 @@
 .logo-container a[b-3t6m41jbm5] {
     font-size: 2rem;
     text-decoration: none;
-    color: white;
+    color: var(--timberwolf);
 }
 
 .nav-container[b-3t6m41jbm5] {
@@ -35,7 +40,93 @@
 
 .nav-item[b-3t6m41jbm5] {
     margin: 2rem;
+    color: var(--timberwolf);
+}
+
+/* _content/AP.WebApp/Components/Pages/ProductManager/AddProduct/AddProduct.razor.rz.scp.css */
+/* _content/AP.WebApp/Components/Pages/ProductManager/ViewProducts/ViewProductsComponent.razor.rz.scp.css */
+/* ---------------- Container Styles ---------------- */
+.inner-container[b-9aipi5ttj2] {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.page-title-container[b-9aipi5ttj2] {
+    width: 100%;
+    padding-bottom: 1rem;
+    border: solud green;
+}
+
+.page-title-container h1[b-9aipi5ttj2] {
+    font-size: 1.4rem;
     color: white;
 }
 
-/* _content/AP.WebApp/Components/Pages/ProductManager/ViewProducts/ViewProductsComponent.razor.rz.scp.css */
+/* ---------------- Products Table ---------------- */
+.products-table[b-9aipi5ttj2] {
+    width: 100%;
+}
+
+.products-table thead tr[b-9aipi5ttj2] {
+    border-bottom: 3px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.products-table tbody tr[b-9aipi5ttj2] {
+    border-bottom: 1px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+
+.products-table tr th[b-9aipi5ttj2],
+.products-table tr td[b-9aipi5ttj2] {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-table tr th:nth-child(2)[b-9aipi5ttj2],
+.products-table tr td:nth-child(2)[b-9aipi5ttj2] {
+    justify-content: left;
+    flex: 3;
+}
+
+.products-table button[b-9aipi5ttj2] {
+    border: 1px solid var(--van-dyke);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--van-dyke);
+    background-color: var(--timberwolf);
+}
+
+/* ---------------- Add Item Button ---------------- */
+.add-item-button-container[b-9aipi5ttj2] {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+.add-item-button-container button[b-9aipi5ttj2] {
+    padding: 0.75rem;
+    color: var(--tea-green);
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.add-item-button-container button a[b-9aipi5ttj2] {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--van-dyke);
+}
+
+
+
+
+

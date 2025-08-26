@@ -21,7 +21,6 @@
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/bundle/AP.WebApp.styles.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/projectbundle/AP.WebApp.bundle.scp.css
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/to3xuqa0z1-khy4lop6wu.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/p34fp41k55-bqjiyaj88i.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/vh3attdvlq-c2jlpeoesf.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/bykj1c4km7-erw9l3u2r3.gz
@@ -84,5 +83,7 @@
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/AP.WebApp.csproj.AssemblyReference.cache
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Components/Pages/ProductManager/ViewProducts/ViewProductsComponent.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/AP.WebApp.csproj.Up2Date
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/d5fsgkc9lk-kdkfraursw.gz
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/fso7558wdm-kdkfraursw.gz
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/to3xuqa0z1-hn1eddxhr6.gz
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Components/Pages/ProductManager/AddProduct/AddProduct.razor.rz.scp.css
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/d5fsgkc9lk-9rbpx2czbk.gz
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/fso7558wdm-9rbpx2czbk.gz

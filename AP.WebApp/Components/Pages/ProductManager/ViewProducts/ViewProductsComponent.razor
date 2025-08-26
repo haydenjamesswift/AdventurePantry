@@ -5,36 +5,47 @@
 
 @inject IViewProductsByNameUseCase ViewProductsByNameUseCase
 
-<h1>Product Manager</h1>
-<br/>
 
-@if (products is not null && products.Count > 0) {
-    <table class="products-table">
-        <thead>
-            <tr>
-                <th>ProductID</th>
-                <th>Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var prod in products) {
+<div class='inner-container'>
+    <div class='page-title-container'>
+        <h1>Product Manager</h1>
+    </div>
+    <div class='page-description-container'>
+        <p>Lorem ipsum dolor</p>
+    </div>
+    @if (products is not null && products.Count > 0) {
+        <table class="products-table">
+            <thead>
                 <tr>
-                    <td>@prod.ProductId</td>
-                    <td>@prod.ProductName</td>
-                    <td>@prod.Quantity</td>
-                    <td>@prod.Price</td>
-                    <td>
-                        <button>Edit</button>
-                    </td>
+                    <th>ProductID</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var prod in products) {
+                    <tr>
+                        <td>@prod.ProductId</td>
+                        <td>@prod.ProductName</td>
+                        <td>@prod.Quantity</td>
+                        <td>@prod.Price</td>
+                        <td>
+                            <button>Edit</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 
+    <div class="add-item-button-container">
+        <button>
+            <a href="/add-product">Add Item</a>
+        </button>
+    </div>
+</div>
 
 @code {
     // Define products
