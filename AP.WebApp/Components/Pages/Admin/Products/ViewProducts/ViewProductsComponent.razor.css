@@ -2,17 +2,24 @@
 .inner-container {
     flex: 1;    
     height: 100%;
-    border: solid green;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-title-container {
     width: 100%;
-    padding-bottom: 1rem;
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
 .page-title-container h1 {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #111;
+}
+
+.page-description-container {
+    flex: 1;
+    padding: 1rem 2rem;
 }
 
 /* ---------------- Products Table ---------------- */
@@ -21,7 +28,7 @@
 }
 
 .products-table thead tr {
-    border-bottom: 3px solid var(--van-dyke);
+    border-bottom: 2px solid var(--van-dyke);
     width: 100%;
     display: flex;
     padding: 0.5rem 0;
@@ -31,7 +38,7 @@
     border-bottom: 1px solid var(--van-dyke);
     width: 100%;
     display: flex;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
 }
 
 
@@ -50,16 +57,8 @@
     flex: 3;
 }
 
-.products-table button {
-    border: 1px solid var(--van-dyke);
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    color: var(--van-dyke);
-    background-color: var(--timberwolf);
-}
 
-.products-table button a {
-    text-decoration: none;
+.products-table  a {
     color: var(--van-dyke);    
 }
 
@@ -68,13 +67,12 @@
 .add-item-button-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     padding: 1rem 0;
 }
 
 .add-item-button-container button {
     padding: 0.75rem;
-    color: var(--tea-green);
+    background-color: var(--tea-green);
     border-radius: 0.25rem;
     border: none;
 }
