@@ -1,0 +1,48 @@
+.banner-container[b-hgmdmy1uq4] {
+    width: 100%;
+    background-color: var(--tea-green);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.banner-content-container[b-hgmdmy1uq4] {
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.banner-item-container[b-hgmdmy1uq4] {
+    display: flex;
+    align-items: center;
+    margin: 0.25rem 1rem 0.25rem 0;
+    width: max-content;
+}
+
+.banner-item-container img[b-hgmdmy1uq4] {
+    max-width: 1.4rem;
+    max-height: 1.4rem;
+    margin-right: 1rem;
+}
+
+.banner-item-container h5[b-hgmdmy1uq4] {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.banner-item-container h6[b-hgmdmy1uq4] {
+    font-size: 0.6rem;
+    margin: 0;
+}
+
+.banner-socials-container[b-hgmdmy1uq4] {
+    display: flex;
+    align-items: center;
+}
+
+.banner-socials-container img[b-hgmdmy1uq4] {
+    max-width: 1rem;
+    max-height: 1rem;
+    margin-left: 1rem;
+}
+
+

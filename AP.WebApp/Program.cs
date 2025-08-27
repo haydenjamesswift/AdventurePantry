@@ -3,7 +3,7 @@ using AP.UseCases;
 using AP.UseCases.PluginInterfaces;
 using AP.UseCases.Products;
 using AP.UseCases.Products.Interfaces;
-using AP.WebApp.Components;
+using AP.WebApp.Sections;
 
 var builder = WebApplication.CreateBuilder(args);
 

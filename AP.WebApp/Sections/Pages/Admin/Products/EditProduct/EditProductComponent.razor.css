@@ -1,0 +1,39 @@
+.inner-container {
+    height: 100%;
+}
+
+.title-container {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1 {
+    font-size: 1rem;
+}
+
+.form-container {
+    padding: 1rem 2rem;
+    width: 50%;
+}
+
+.form-item {
+    margin-bottom: 1rem;
+}
+
+.form-item label {
+    margin-bottom: 0.5rem;
+}
+
+
+.button-container button {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a {
+    text-decoration: underline;
+    color: black;
+}

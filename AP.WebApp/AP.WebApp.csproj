@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components/Controls/" />
-    <Folder Include="Components/Layouts/StoreLayouts/" />
-    <Folder Include="Components/Pages/Admin/Users/" />
+    <Folder Include="Sections/Controls/" />
+    <Folder Include="Sections/Layouts/StoreLayouts/" />
+    <Folder Include="Sections/Pages/Admin/Users/" />
     <Folder Include="wwwroot/assets/icons/" />
   </ItemGroup>
 

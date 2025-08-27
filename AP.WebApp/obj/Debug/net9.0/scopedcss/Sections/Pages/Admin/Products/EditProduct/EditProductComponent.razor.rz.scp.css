@@ -1,0 +1,39 @@
+.inner-container[b-hgid8783nz] {
+    height: 100%;
+}
+
+.title-container[b-hgid8783nz] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1[b-hgid8783nz] {
+    font-size: 1rem;
+}
+
+.form-container[b-hgid8783nz] {
+    padding: 1rem 2rem;
+    width: 50%;
+}
+
+.form-item[b-hgid8783nz] {
+    margin-bottom: 1rem;
+}
+
+.form-item label[b-hgid8783nz] {
+    margin-bottom: 0.5rem;
+}
+
+
+.button-container button[b-hgid8783nz] {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a[b-hgid8783nz] {
+    text-decoration: underline;
+    color: black;
+}

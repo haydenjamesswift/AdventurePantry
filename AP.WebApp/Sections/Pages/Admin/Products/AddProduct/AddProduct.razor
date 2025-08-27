@@ -1,0 +1,67 @@
+﻿<!-- Imports -->
+@using AP.CoreBusiness
+@using AP.UseCases.Products
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+
+<!-- Injections -->
+@inject IAddProductUseCase AddProductUseCase
+@inject NavigationManager NavigationManager
+
+<!-- Page Definitions -->
+@page "/admin/add-product"
+@layout AdminLayout
+
+<!-- HTML -->
+<div class="inner-container">
+    <div class="title-container">
+        <h1>Add A New Product</h1>
+    </div>
+    <div class="form-container">
+    <EditForm Model="product" FormName="formProduct" OnValidSubmit="Save">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+
+        <div class='form-item'>
+            <label for="name">Product Name</label>
+            <InputText 
+                id="name"
+                @bind-Value="product.ProductName"
+                class="form-control">
+            </InputText>
+            <ValidationMessage For="() => product.ProductName">This field is required.</ValidationMessage>
+        </div>
+        <div class='form-item'>
+            <label for="name">Quantity</label>
+            <InputNumber 
+                id="name"
+                @bind-Value="product.Quantity"
+                class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => product.Quantity"></ValidationMessage>
+        </div>
+        <div class='form-item'>
+            <label for="name">Price</label>
+            <InputNumber 
+                id="name"
+                @bind-Value="product.Price"
+                class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => product.Price"></ValidationMessage>
+        </div>
+        <br/>
+        <div class="button-container">
+            <button type='submit'>Add Item</button>
+            <a class="cancel-button" href="/admin/view-products">Cancel</a>
+        </div>
+    </EditForm>
+    </div>
+</div> 
+
+@code {
+    [SupplyParameterFromForm]
+    private Product product { get; set; } = new Product();
+
+    public async Task Save() {
+        await AddProductUseCase.ExecuteAsync(product); 
+        NavigationManager.NavigateTo("/admin/view-products");
+    }
+}

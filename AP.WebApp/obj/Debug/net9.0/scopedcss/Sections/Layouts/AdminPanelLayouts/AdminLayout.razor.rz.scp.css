@@ -1,0 +1,55 @@
+.admin-panel-container[b-ofccq2rop8] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel-content-area[b-ofccq2rop8] {
+    flex: 1;
+    display: flex;
+}
+
+
+.admin-panel-side-bar[b-ofccq2rop8] {
+    min-width: 300px;
+    background-color: #eee;
+}
+
+.side-bar-title-container[b-ofccq2rop8] {
+    padding: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.side-bar-title-container h1[b-ofccq2rop8] {
+    font-size: 1rem;
+}
+
+.side-bar-item[b-ofccq2rop8] {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Normal state */
+.side-bar-link[b-ofccq2rop8] {
+     color: black;
+    text-decoration: none;
+}
+
+/* Hover state */
+.side-bar-link:hover[b-ofccq2rop8] {
+    color: black;
+    text-decoration: none;
+}
+
+/* Active state */
+.side-bar-link.active[b-ofccq2rop8] {
+    color: black;
+    text-decoration: none;
+}
+
+.admin-panel-content[b-ofccq2rop8] {
+    flex: 1;
+}

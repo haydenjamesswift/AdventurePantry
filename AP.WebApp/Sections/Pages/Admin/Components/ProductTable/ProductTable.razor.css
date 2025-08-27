@@ -1,0 +1,57 @@
+
+/* ---------------- Products Table ---------------- */
+.products-table {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 0.25rem;
+    border: 1px solid black;;
+}
+
+.products-table thead tr {
+    border-bottom: 2px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+.products-table tbody tr {
+    border-bottom: 1px solid var(--van-dyke);
+    width: 100%;
+    display: flex;
+    padding: 0.25rem 0;
+}
+
+.products-table tbody tr:last-child {
+    border-bottom: 0;
+}
+
+.products-table tbody tr:nth-child(2n-1) {
+    background-color: white;;
+}
+
+.products-table tr th,
+.products-table tr td {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-table tr th:nth-child(2),
+.products-table tr td:nth-child(2) {
+    justify-content: left;
+    flex: 3;
+}
+
+
+.products-table  a {
+    color: var(--van-dyke);    
+}
+
+
+
+
+
+

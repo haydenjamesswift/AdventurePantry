@@ -1,0 +1,35 @@
+.header-main-container[b-fief54coxc] {
+    width: 100%;
+    max-height: 6rem;
+    background-color: var(--tea-green);
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img[b-fief54coxc] {
+    max-width: 5rem;
+}
+
+.nav-menu-desktop[b-fief54coxc] {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-desktop a[b-fief54coxc] {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+.nav-menu-desktop button[b-fief54coxc] {
+    margin-left: 2rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    color: var(--timberwolf);
+    background-color: var(--van-dyke);
+    border: none;
+}
