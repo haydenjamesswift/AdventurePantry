@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AP.Plugins.InMemory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+828d9350e4955fd0c1edf743f101a298b913cd94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9dca8307e488cfaaa6b098993768e6815f7dbc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AP.Plugins.InMemory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AP.Plugins.InMemory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
