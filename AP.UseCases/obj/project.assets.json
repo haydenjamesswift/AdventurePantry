@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "AP.CoreBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/AP.CoreBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.CoreBusiness.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AP.CoreBusiness/1.0.0": {
+      "type": "project",
+      "path": "../AP.CoreBusiness/AP.CoreBusiness.csproj",
+      "msbuildProject": "../AP.CoreBusiness/AP.CoreBusiness.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "AP.CoreBusiness >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/haydenswift/.nuget/packages/": {}
@@ -32,7 +51,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
+              "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

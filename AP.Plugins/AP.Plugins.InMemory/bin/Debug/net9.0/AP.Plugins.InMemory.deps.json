@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AP.Plugins.InMemory/1.0.0": {
+        "dependencies": {
+          "AP.CoreBusiness": "1.0.0",
+          "AP.UseCases": "1.0.0"
+        },
+        "runtime": {
+          "AP.Plugins.InMemory.dll": {}
+        }
+      },
+      "AP.CoreBusiness/1.0.0": {
+        "runtime": {
+          "AP.CoreBusiness.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AP.UseCases/1.0.0": {
+        "dependencies": {
+          "AP.CoreBusiness": "1.0.0"
+        },
+        "runtime": {
+          "AP.UseCases.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AP.Plugins.InMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AP.CoreBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AP.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

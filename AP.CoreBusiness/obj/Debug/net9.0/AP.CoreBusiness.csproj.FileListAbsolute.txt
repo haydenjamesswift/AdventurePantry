@@ -1,0 +1,12 @@
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/bin/Debug/net9.0/AP.CoreBusiness.deps.json
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/bin/Debug/net9.0/AP.CoreBusiness.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/bin/Debug/net9.0/AP.CoreBusiness.pdb
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.AssemblyInfoInputs.cache
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.AssemblyInfo.cs
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.csproj.CoreCompileInputs.cache
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.sourcelink.json
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/refint/AP.CoreBusiness.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/AP.CoreBusiness.pdb
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/obj/Debug/net9.0/ref/AP.CoreBusiness.dll

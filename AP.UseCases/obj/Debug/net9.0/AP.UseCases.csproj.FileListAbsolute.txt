@@ -1,0 +1,16 @@
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/bin/Debug/net9.0/AP.UseCases.deps.json
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/bin/Debug/net9.0/AP.UseCases.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/bin/Debug/net9.0/AP.UseCases.pdb
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/bin/Debug/net9.0/AP.CoreBusiness.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/bin/Debug/net9.0/AP.CoreBusiness.pdb
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.csproj.AssemblyReference.cache
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.AssemblyInfoInputs.cache
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.AssemblyInfo.cs
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.csproj.CoreCompileInputs.cache
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.sourcelink.json
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCa.69D05533.Up2Date
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/refint/AP.UseCases.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/AP.UseCases.pdb
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/obj/Debug/net9.0/ref/AP.UseCases.dll

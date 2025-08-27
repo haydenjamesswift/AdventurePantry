@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../AP.CoreBusiness/AP.CoreBusiness.csproj" />
+  </ItemGroup>
+
 </Project>
