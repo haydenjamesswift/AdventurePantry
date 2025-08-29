@@ -1,0 +1,33 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases.Inventories.Interfaces
+
+@inject IDeleteInventoryUseCase DeleteInventoryUseCase
+@inject NavigationManager NavigationManager
+
+@if (this.Inventory is not null) {
+     <div class="table-row">
+        <div class="table-cell">@Inventory.InventoryId</div>
+        <div class="table-cell">@Inventory.InventoryName</div>
+        <div class="table-cell">@Inventory.Quantity</div>
+        <div class="table-cell">@Inventory.Price</div>
+        <div class="table-cell">
+            <a href="/admin/edit-inventory/@Inventory.InventoryId">Edit</a>
+        </div>
+        <div class="table-cell">
+            <EditForm Enhance="true" Model="Inventory" FormName="@($"formDeleteInventory-{Inventory.InventoryId}")" OnValidSubmit="() => Delete(Inventory.InventoryId)">
+                <button class="delete-button" type="submit">Delete</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Inventory? Inventory { get; set; }
+
+    // Delete inventory
+    private async Task Delete(int inventoryId) {
+        await DeleteInventoryUseCase.ExecuteAsync(inventoryId);
+        NavigationManager.Refresh();
+    }
+}

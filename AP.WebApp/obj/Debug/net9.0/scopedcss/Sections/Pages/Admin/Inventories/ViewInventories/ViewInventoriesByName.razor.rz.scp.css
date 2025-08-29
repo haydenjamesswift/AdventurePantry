@@ -1,0 +1,55 @@
+/* ---------------- Container Styles ---------------- */
+.inner-container[b-u7qb19299c] {
+    flex: 1;    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title-container[b-u7qb19299c] {
+    width: 100%;
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.page-title-container h1[b-u7qb19299c] {
+    font-size: 1rem;
+    color: #111;
+}
+
+.page-description-container[b-u7qb19299c] {
+    flex: 1;
+    padding: 1rem 6rem 1rem 2rem;
+}
+
+.search-container[b-u7qb19299c] {
+    width: 100%;
+    display: flex;
+}
+
+
+.search-container img[b-u7qb19299c] {
+    max-width: 1rem;
+}
+
+
+/* ---------------- Add Item Button ---------------- */
+.add-item-button-container[b-u7qb19299c] {
+    width: 100%;
+    display: flex;
+    padding: 1rem 0;
+}
+
+.add-item-button-container button[b-u7qb19299c] {
+    padding: 0.75rem;
+    background-color: var(--tea-green);
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.add-item-button-container button a[b-u7qb19299c] {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--van-dyke);
+}
+

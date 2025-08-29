@@ -1,0 +1,46 @@
+﻿@using AP.CoreBusiness
+@using AP.WebApp.Sections.Pages.Admin.Components.SearchComponents
+
+<!-- HTML -->
+<div class="product-inventories-container">
+    <SearchProductInventories OnInventorySelected="HandleInventorySelected"></SearchProductInventories>
+    @if (Product is not null && 
+        Product.ProductInventories is not null &&
+        Product.ProductInventories.Count > 0)
+    {
+        <div class='table-container'>
+            <div class='row'>
+                <div class='cell'>Name</div>
+                <div class='cell'>Quantity</div>
+                <div class='cell'></div>
+            </div>
+            @foreach (var productInventory in Product.ProductInventories) {
+                <div class='row'>
+                    <div class='cell'>@productInventory.Inventory?.InventoryName</div>
+                    <div class='cell'>
+                        <input type="number" min="0" @bind-value="productInventory.InventoryQuantity"/>
+                    </div>
+                    <div class='cell'>
+                        <button type="button" @onclick="() => RemoveInventory(productInventory)">Remove</button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Product? Product { get; set; }
+
+    // Remove inventory
+    private void RemoveInventory(ProductInventory productInventory) {
+        this.Product?.RemoveInventory(productInventory);   
+    }
+
+    // Handle selected
+    private void HandleInventorySelected(Inventory inventory) {
+        this.Product?.AddInventory(inventory);
+    }
+
+}

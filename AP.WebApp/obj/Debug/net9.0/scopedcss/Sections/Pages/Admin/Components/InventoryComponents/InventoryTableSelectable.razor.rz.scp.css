@@ -1,0 +1,58 @@
+.tables-container[b-vcaccvboay] {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inventory-table[b-vcaccvboay] {
+    background-color: #fff;
+    flex: 1;
+}
+
+.row[b-vcaccvboay] {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.row:hover[b-vcaccvboay] {
+    background-color: aliceblue;
+}
+
+.row:first-child[b-vcaccvboay] {
+    background-color: red;
+}
+
+.row:first-child[b-vcaccvboay], 
+.row:nth-child(2)[b-vcaccvboay] {
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.row:last-child[b-vcaccvboay] {
+    border-bottom: 1px solid black;
+}
+
+.cell[b-vcaccvboay] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cell:nth-child(2)[b-vcaccvboay] {
+    flex: 3;
+}
+
+.cell button[b-vcaccvboay] {
+    text-decoration: underline;
+}
+
+
+.cell input[b-vcaccvboay] {
+    width: 3rem;
+}

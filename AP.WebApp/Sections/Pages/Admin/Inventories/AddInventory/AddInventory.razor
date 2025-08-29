@@ -1,0 +1,67 @@
+﻿<!-- Imports -->
+@using AP.CoreBusiness
+@using AP.UseCases.Inventories
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+
+<!-- Injections -->
+@inject IAddInventoryUseCase AddInventoryUseCase
+@inject NavigationManager NavigationManager
+
+<!-- Page Definitions -->
+@page "/admin/add-inventory"
+@layout AdminLayout
+
+<!-- HTML -->
+<div class="inner-container">
+    <div class="title-container">
+        <h1>Add A New Inventory</h1>
+    </div>
+    <div class="form-container">
+    <EditForm Model="inventory" FormName="formInventory" OnValidSubmit="Save">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+
+        <div class='form-item'>
+            <label for="name">Inventory Name</label>
+            <InputText 
+                id="name"
+                @bind-Value="inventory.InventoryName"
+                class="form-control">
+            </InputText>
+            <ValidationMessage For="() => inventory.InventoryName">This field is required.</ValidationMessage>
+        </div>
+        <div class='form-item'>
+            <label for="name">Quantity</label>
+            <InputNumber 
+                id="name"
+                @bind-Value="inventory.Quantity"
+                class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => inventory.Quantity"></ValidationMessage>
+        </div>
+        <div class='form-item'>
+            <label for="name">Price</label>
+            <InputNumber 
+                id="name"
+                @bind-Value="inventory.Price"
+                class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => inventory.Price"></ValidationMessage>
+        </div>
+        <br/>
+        <div class="button-container">
+            <button type='submit'>Add Item</button>
+            <a class="cancel-button" href="/admin/view-inventories">Cancel</a>
+        </div>
+    </EditForm>
+    </div>
+</div> 
+
+@code {
+    [SupplyParameterFromForm]
+    private Inventory inventory { get; set; } = new Inventory();
+
+    public async Task Save() {
+        await AddInventoryUseCase.ExecuteAsync(inventory); 
+        NavigationManager.NavigateTo("/admin/view-inventories");
+    }
+}

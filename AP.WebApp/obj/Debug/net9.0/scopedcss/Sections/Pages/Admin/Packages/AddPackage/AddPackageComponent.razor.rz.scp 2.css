@@ -1,0 +1,39 @@
+.inner-container[b-hp7kzx7kab] {
+    height: 100%;
+}
+
+.title-container[b-hp7kzx7kab] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1[b-hp7kzx7kab] {
+    font-size: 1rem;
+}
+
+.form-container[b-hp7kzx7kab] {
+    padding: 1rem 2rem;
+    width: 50%;
+}
+
+.form-item[b-hp7kzx7kab] {
+    margin-bottom: 1rem;
+}
+
+.form-item label[b-hp7kzx7kab] {
+    margin-bottom: 0.5rem;
+}
+
+
+.button-container button[b-hp7kzx7kab] {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a[b-hp7kzx7kab] {
+    text-decoration: underline;
+    color: black;
+}

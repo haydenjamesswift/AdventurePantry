@@ -160,73 +160,258 @@
 #blazor-error-ui[b-nfri6d1bpw] {
     display: none;
 }
-/* _content/AP.WebApp/Sections/Pages/Admin/Components/ProductTable/ProductTable.razor.rz.scp.css */
-
-/* ---------------- Products Table ---------------- */
-.products-table[b-a9uxetqid6] {
-    margin-top: 1rem;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 0.25rem;
-    border: 1px solid black;;
-}
-
-.products-table thead tr[b-a9uxetqid6] {
-    border-bottom: 2px solid var(--van-dyke);
-    width: 100%;
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/InventoryComponents/InventoryListItem.razor.rz.scp.css */
+.table-row[b-35t7xfl2kj] {
     display: flex;
-    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.products-table tbody tr[b-a9uxetqid6] {
-    border-bottom: 1px solid var(--van-dyke);
-    width: 100%;
-    display: flex;
-    padding: 0.25rem 0;
-}
-
-.products-table tbody tr:last-child[b-a9uxetqid6] {
-    border-bottom: 0;
-}
-
-.products-table tbody tr:nth-child(2n-1)[b-a9uxetqid6] {
-    background-color: white;;
-}
-
-.products-table tr th[b-a9uxetqid6],
-.products-table tr td[b-a9uxetqid6] {
-    flex: 1;
+.table-cell[b-35t7xfl2kj] {
+    padding: 0.75rem;
+    font-weight: 500;
     text-align: center;
+    flex: 1;
+
+}
+
+.table-cell:nth-child(2)[b-35t7xfl2kj] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-35t7xfl2kj] {
+    border-right: 0;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/InventoryComponents/InventoryTable.razor.rz.scp.css */
+/* ---------------- Products Table ---------------- */
+.inventory-table[b-388geemlwb] {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.table-row[b-388geemlwb] {
+    display: flex;
+    padding: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.table-cell[b-388geemlwb] {
+    padding: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+}
+
+.table-cell:nth-child(2)[b-388geemlwb] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-388geemlwb] {
+    border-right: 0;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/InventoryComponents/InventoryTableSelectable.razor.rz.scp.css */
+.tables-container[b-vcaccvboay] {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inventory-table[b-vcaccvboay] {
+    background-color: #fff;
+    flex: 1;
+}
+
+.row[b-vcaccvboay] {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.row:hover[b-vcaccvboay] {
+    background-color: aliceblue;
+}
+
+.row:first-child[b-vcaccvboay] {
+    background-color: red;
+}
+
+.row:first-child[b-vcaccvboay], 
+.row:nth-child(2)[b-vcaccvboay] {
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.row:last-child[b-vcaccvboay] {
+    border-bottom: 1px solid black;
+}
+
+.cell[b-vcaccvboay] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cell:nth-child(2)[b-vcaccvboay] {
+    flex: 3;
+}
+
+.cell button[b-vcaccvboay] {
+    text-decoration: underline;
+}
+
+
+.cell input[b-vcaccvboay] {
+    width: 3rem;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/ProductComponents/ProductListItem.razor.rz.scp.css */
+.table-row[b-vnry7o1d83] {
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.table-cell[b-vnry7o1d83] {
+    padding: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+
+}
+
+.table-cell:nth-child(2)[b-vnry7o1d83] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-vnry7o1d83] {
+    border-right: 0;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/ProductComponents/ProductTable.razor.rz.scp.css */
+/* ---------------- Products Table ---------------- */
+.product-table[b-2ce8kj4ies] {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.table-row[b-2ce8kj4ies] {
+    display: flex;
+    padding: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.table-cell[b-2ce8kj4ies] {
+    padding: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+}
+
+.table-cell:nth-child(2)[b-2ce8kj4ies] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-2ce8kj4ies] {
+    border-right: 0;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/SearchComponents/SearchComponent.razor.rz.scp.css */
+.search-container[b-m5t5yq58a8] {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0;
+}
+
+[b-m5t5yq58a8] .text-input {
+    padding: 0.5rem;
+    width: 100%;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid black;
+    border-right: none;
+
+}
+
+.search-container button[b-m5t5yq58a8] {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid black;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--tea-green);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.products-table tr th:nth-child(2)[b-a9uxetqid6],
-.products-table tr td:nth-child(2)[b-a9uxetqid6] {
-    justify-content: left;
-    flex: 3;
+
+.search-container button img[b-m5t5yq58a8] {
+    max-width: 1rem;
 }
 
-
-.products-table  a[b-a9uxetqid6] {
-    color: var(--van-dyke);    
-}
-
-
-
-
-
-
-/* _content/AP.WebApp/Sections/Pages/Admin/Components/SearchComponent/SearchComponent.razor.rz.scp.css */
-.search-container[b-ojvxdvsnpt] {
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/SearchComponents/SearchProductInventories.razor.rz.scp.css */
+/* --------------- SEARCH BAR --------------- */
+.search-container[b-qav5eth2qq] {
+    display: flex;
     width: 100%;
+}
+
+.search-container .text-input[b-qav5eth2qq] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 0;
+}
+
+.search-container button[b-qav5eth2qq] {
+    background-color: var(--tea-green);
+    width: 2.5rem;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.search-container button img[b-qav5eth2qq] {
+    width: 1.5rem;
+}
+
+/* --------------- INVENTORIES DIV --------------- */
+.inventories-container[b-qav5eth2qq] {
+    background-color: #fff;
+    box-shadow: 4px 2px 10px 2px rgba(0,0,0,0.2);
+    overflow-y: scroll;
+    max-height: 300px;
+    width: calc(100% - 2.5rem);
+}
+
+.row[b-qav5eth2qq] {
     display: flex;
 }
 
+.row:hover[b-qav5eth2qq] {
+    background-color: aliceblue;
+}
 
-.search-container img[b-ojvxdvsnpt] {
-    max-width: 1rem;
+.cell[b-qav5eth2qq] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cell button:hover[b-qav5eth2qq] {
+    cursor: pointer;
 }
 /* _content/AP.WebApp/Sections/Pages/Admin/Dashboard/DashboardComponent.razor.rz.scp.css */
 .inner-container[b-jje01w0sz3] {
@@ -237,35 +422,35 @@
     align-items: center;
 }
 
-/* _content/AP.WebApp/Sections/Pages/Admin/Products/AddProduct/AddProduct.razor.rz.scp.css */
-.inner-container[b-7k6dzsrarh] {
+/* _content/AP.WebApp/Sections/Pages/Admin/Inventories/AddInventory/AddInventory.razor.rz.scp.css */
+.inner-container[b-yzyo4i61op] {
     height: 100%;
 }
 
-.title-container[b-7k6dzsrarh] {
+.title-container[b-yzyo4i61op] {
     padding: 1.4rem 1rem;
     border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
-.title-container h1[b-7k6dzsrarh] {
+.title-container h1[b-yzyo4i61op] {
     font-size: 1rem;
 }
 
-.form-container[b-7k6dzsrarh] {
+.form-container[b-yzyo4i61op] {
     padding: 1rem 2rem;
     width: 50%;
 }
 
-.form-item[b-7k6dzsrarh] {
+.form-item[b-yzyo4i61op] {
     margin-bottom: 1rem;
 }
 
-.form-item label[b-7k6dzsrarh] {
+.form-item label[b-yzyo4i61op] {
     margin-bottom: 0.5rem;
 }
 
 
-.button-container button[b-7k6dzsrarh] {
+.button-container button[b-yzyo4i61op] {
     background-color: var(--tea-green);
     padding: 0.7rem;
     border-radius: 0.25rem;
@@ -273,101 +458,306 @@
     border: none;
 }   
 
-.button-container a[b-7k6dzsrarh] {
+.button-container a[b-yzyo4i61op] {
     text-decoration: underline;
     color: black;
 }
-/* _content/AP.WebApp/Sections/Pages/Admin/Products/EditProduct/EditProductComponent.razor.rz.scp.css */
-.inner-container[b-hgid8783nz] {
+/* _content/AP.WebApp/Sections/Pages/Admin/Inventories/EditInventory/EditInventoryComponent.razor.rz.scp.css */
+.inner-container[b-6iuwbdrkdf] {
     height: 100%;
 }
 
-.title-container[b-hgid8783nz] {
+.title-container[b-6iuwbdrkdf] {
     padding: 1.4rem 1rem;
     border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
-.title-container h1[b-hgid8783nz] {
+.title-container h1[b-6iuwbdrkdf] {
     font-size: 1rem;
 }
 
-.form-container[b-hgid8783nz] {
+.form-container[b-6iuwbdrkdf] {
     padding: 1rem 2rem;
     width: 50%;
 }
 
-.form-item[b-hgid8783nz] {
+.form-item[b-6iuwbdrkdf] {
     margin-bottom: 1rem;
 }
 
-.form-item label[b-hgid8783nz] {
+.form-item label[b-6iuwbdrkdf] {
     margin-bottom: 0.5rem;
 }
 
+.button-container[b-6iuwbdrkdf] {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
 
-.button-container button[b-hgid8783nz] {
+.button-container button[b-6iuwbdrkdf] {
     background-color: var(--tea-green);
     padding: 0.7rem;
     border-radius: 0.25rem;
-    margin-right: 0.5rem;
     border: none;
 }   
 
-.button-container a[b-hgid8783nz] {
+.button-container a[b-6iuwbdrkdf] {
     text-decoration: underline;
     color: black;
 }
-/* _content/AP.WebApp/Sections/Pages/Admin/Products/ViewProducts/ViewProductsComponent.razor.rz.scp.css */
+/* _content/AP.WebApp/Sections/Pages/Admin/Inventories/ViewInventories/ViewInventoriesByName.razor.rz.scp.css */
 /* ---------------- Container Styles ---------------- */
-.inner-container[b-vs89r42jqa] {
+.inner-container[b-u7qb19299c] {
     flex: 1;    
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.page-title-container[b-vs89r42jqa] {
+.page-title-container[b-u7qb19299c] {
     width: 100%;
     padding: 1.4rem 1rem;
     border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
-.page-title-container h1[b-vs89r42jqa] {
+.page-title-container h1[b-u7qb19299c] {
     font-size: 1rem;
     color: #111;
 }
 
-.page-description-container[b-vs89r42jqa] {
+.page-description-container[b-u7qb19299c] {
     flex: 1;
     padding: 1rem 6rem 1rem 2rem;
 }
 
-.search-container[b-vs89r42jqa] {
+.search-container[b-u7qb19299c] {
     width: 100%;
     display: flex;
 }
 
 
-.search-container img[b-vs89r42jqa] {
+.search-container img[b-u7qb19299c] {
     max-width: 1rem;
 }
 
 
 /* ---------------- Add Item Button ---------------- */
-.add-item-button-container[b-vs89r42jqa] {
+.add-item-button-container[b-u7qb19299c] {
     width: 100%;
     display: flex;
     padding: 1rem 0;
 }
 
-.add-item-button-container button[b-vs89r42jqa] {
+.add-item-button-container button[b-u7qb19299c] {
     padding: 0.75rem;
     background-color: var(--tea-green);
     border-radius: 0.25rem;
     border: none;
 }
 
-.add-item-button-container button a[b-vs89r42jqa] {
+.add-item-button-container button a[b-u7qb19299c] {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--van-dyke);
+}
+
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/AddProducts/AddProductComponent.razor.rz.scp.css */
+.inner-container[b-j1cm01ytpa] {
+    height: 100%;
+}
+
+.title-container[b-j1cm01ytpa] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1[b-j1cm01ytpa] {
+    font-size: 1rem;
+}
+
+.form-container[b-j1cm01ytpa] {
+    padding: 1rem 2rem;
+    width: 50%;
+    background-color: #eee;
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+}
+
+.form-item[b-j1cm01ytpa] {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label[b-j1cm01ytpa] {
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.form-item[b-j1cm01ytpa]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+
+.button-container button[b-j1cm01ytpa] {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a[b-j1cm01ytpa] {
+    text-decoration: underline;
+    color: black;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/AddProducts/AddProductInventories.razor.rz.scp.css */
+.product-inventories-container[b-tl7mhwqt8j] {
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.25rem;
+}
+
+.table-container[b-tl7mhwqt8j] {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.row[b-tl7mhwqt8j] {
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.row:first-child[b-tl7mhwqt8j] {
+    font-weight: 700;
+}
+
+.cell[b-tl7mhwqt8j] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    max-height: 2.5rem;
+    min-height: 2.5rem;
+}
+
+.cell:first-child[b-tl7mhwqt8j] {
+    justify-content: unset;
+}
+
+.cell input[b-tl7mhwqt8j] {
+    width: 3rem;
+}
+
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/EditProducts/EditProductComponent.razor.rz.scp.css */
+.inner-container[b-v8m8nnl2az] {
+    height: 100%;
+}
+
+.title-container[b-v8m8nnl2az] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1[b-v8m8nnl2az] {
+    font-size: 1rem;
+}
+
+.form-container[b-v8m8nnl2az] {
+    padding: 1rem 2rem;
+    width: 50%;
+    background-color: #eee;
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+}
+
+.form-item[b-v8m8nnl2az] {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label[b-v8m8nnl2az] {
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.form-item[b-v8m8nnl2az]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+
+.button-container button[b-v8m8nnl2az] {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a[b-v8m8nnl2az] {
+    text-decoration: underline;
+    color: black;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/ViewProducts/ProductListComponent.razor.rz.scp.css */
+/* ---------------- Container Styles ---------------- */
+.inner-container[b-wjr73qdue1] {
+    flex: 1;    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title-container[b-wjr73qdue1] {
+    width: 100%;
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.page-title-container h1[b-wjr73qdue1] {
+    font-size: 1rem;
+    color: #111;
+}
+
+.page-description-container[b-wjr73qdue1] {
+    flex: 1;
+    padding: 1rem 6rem 1rem 2rem;
+}
+
+.search-container[b-wjr73qdue1] {
+    width: 100%;
+    display: flex;
+}
+
+
+.search-container img[b-wjr73qdue1] {
+    max-width: 1rem;
+}
+
+
+/* ---------------- Add Item Button ---------------- */
+.add-item-button-container[b-wjr73qdue1] {
+    width: 100%;
+    display: flex;
+    padding: 1rem 0;
+}
+
+.add-item-button-container button[b-wjr73qdue1] {
+    padding: 0.75rem;
+    background-color: var(--tea-green);
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.add-item-button-container button a[b-wjr73qdue1] {
     text-decoration: none;
     font-weight: 500;
     color: var(--van-dyke);

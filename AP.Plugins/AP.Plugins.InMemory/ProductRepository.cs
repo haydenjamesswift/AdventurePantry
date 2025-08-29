@@ -14,10 +14,8 @@ public class ProductRepository : IProductRepository
     {
         _products = new List<Product>()
         {
-            new Product { ProductId = 1, ProductName = "Bike Seat", Quantity = 10, Price = 15},
-            new Product { ProductId = 2, ProductName = "Bike Frame", Quantity = 6, Price = 25},
-            new Product { ProductId = 3, ProductName = "Bike Pedals", Quantity = 16, Price = 10},
-            new Product { ProductId = 4, ProductName = "Bike Wheels", Quantity = 24, Price = 10}
+            new Product { ProductId = 1, ProductName = "Bike", Quantity = 10, Price = 900},
+            new Product { ProductId = 2, ProductName = "Car", Quantity = 6, Price = 4500}
         };
     }
 
@@ -28,6 +26,7 @@ public class ProductRepository : IProductRepository
 
         return _products.Where(x => x.ProductName.Contains(name, StringComparison.OrdinalIgnoreCase));
     }
+
 
     public Task AddProductAsync(Product product)
     {
@@ -62,6 +61,7 @@ public class ProductRepository : IProductRepository
             prodToUpdate.ProductName = product.ProductName;
             prodToUpdate.Quantity = product.Quantity;
             prodToUpdate.Price = product.Price;
+            prodToUpdate.ProductInventories = product.ProductInventories;
         }
 
         return Task.CompletedTask;
@@ -72,5 +72,17 @@ public class ProductRepository : IProductRepository
         return await Task.FromResult(_products.First(x => x.ProductId == productId));
     }
 
+    public Task DeleteProductAsync(int productId)
+    {
+        // Check that product exists
+        var productToDelete = _products.FirstOrDefault(x => x.ProductId == productId);
+
+        if (productToDelete is not null)
+        {
+            _products.Remove(productToDelete);
+        }
+
+        return Task.CompletedTask;
+    }
 }
  

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AP.UseCases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9dca8307e488cfaaa6b098993768e6815f7dbc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3bceecbc63e99dce325aecf91462e74a783be2")]
 [assembly: System.Reflection.AssemblyProductAttribute("AP.UseCases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AP.UseCases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

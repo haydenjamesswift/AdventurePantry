@@ -1,0 +1,56 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases.Inventories.Interfaces
+
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
+
+<div class="search-container">
+    <input 
+        class="text-input"
+        placeholder="Start typing to search "
+        @bind-value="this.searchFilter" 
+        @bind-value:event="oninput"/>
+    <button type='button' class="btn-success input-group-text" @onclick="HandleSearch"><img src="assets/icons/search.png"/></button>
+</div>
+@if (inventories is not null && inventories.Count > 0) {
+    <div class='inventories-container'>
+        @foreach (var inv in inventories) {
+            <div key="@inv.InventoryId" class='row'>
+                <div class='cell'>@inv.InventoryName</div>
+                <div class='cell'>$@inv.Price</div>
+                <div class='cell'>
+                    <button type="button" @onclick="() => { HandleSelectInventory(inv); }">Add</button>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+
+@code {
+    private string _searchFilter;
+    private string searchFilter {
+        get => _searchFilter;
+        set {
+            _searchFilter = value;
+            HandleSearch();
+        }
+    }
+    private List<Inventory> inventories = new List<Inventory>();
+
+    public async Task HandleSearch() 
+    {
+        await Task.Delay(500);
+        inventories = (await ViewInventoriesByNameUseCase.ExecuteAsync(searchFilter)).ToList();
+        StateHasChanged();
+    }
+
+    [Parameter]
+    public EventCallback<Inventory> OnInventorySelected { get; set; }
+
+    public async Task HandleSelectInventory(Inventory inventory) 
+    {
+        await OnInventorySelected.InvokeAsync(inventory);
+        inventories.Clear();
+    }
+
+}

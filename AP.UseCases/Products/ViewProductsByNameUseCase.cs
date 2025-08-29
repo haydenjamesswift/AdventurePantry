@@ -1,6 +1,6 @@
-﻿using AP.CoreBusiness;
-using AP.UseCases.PluginInterfaces;
+using AP.CoreBusiness;
 using AP.UseCases.Products.Interfaces;
+using AP.UseCases.PluginInterfaces;
 
 namespace AP.UseCases;
 

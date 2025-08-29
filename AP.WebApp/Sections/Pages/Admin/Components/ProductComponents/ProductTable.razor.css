@@ -1,0 +1,26 @@
+/* ---------------- Products Table ---------------- */
+.product-table {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.table-row {
+    display: flex;
+    padding: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.table-cell {
+    padding: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+}
+
+.table-cell:nth-child(2) {
+    flex: 3;
+}
+
+.table-cell:last-child {
+    border-right: 0;
+}

@@ -1,0 +1,26 @@
+﻿@if (searchFilter is null) {
+    searchFilter = string.Empty;
+}
+
+<EditForm Enhance="true" Model="searchFilter " FormName="formSearchProducts" OnSubmit="Search">
+    <div class="search-container">
+        <InputText 
+            class="text-input"
+            placeholder="Start typing to search "
+            @bind-Value="this.searchFilter">
+        </InputText>
+        <button type='submit' class="btn-success input-group-text"><img src="assets/icons/search.png"/></button>
+    </div>
+</EditForm>
+ 
+@code {
+    [SupplyParameterFromForm]
+    private string searchFilter { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+
+    private void Search() {
+        OnSearch.InvokeAsync(searchFilter);
+    }
+}

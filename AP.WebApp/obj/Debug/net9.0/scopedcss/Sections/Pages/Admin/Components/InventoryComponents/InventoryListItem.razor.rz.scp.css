@@ -1,0 +1,20 @@
+.table-row[b-35t7xfl2kj] {
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.table-cell[b-35t7xfl2kj] {
+    padding: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+
+}
+
+.table-cell:nth-child(2)[b-35t7xfl2kj] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-35t7xfl2kj] {
+    border-right: 0;
+}

@@ -1,0 +1,39 @@
+.product-inventories-container {
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.25rem;
+}
+
+.table-container {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.row {
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.row:first-child {
+    font-weight: 700;
+}
+
+.cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    max-height: 2.5rem;
+    min-height: 2.5rem;
+}
+
+.cell:first-child {
+    justify-content: unset;
+}
+
+.cell input {
+    width: 3rem;
+}
+

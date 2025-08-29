@@ -1,0 +1,39 @@
+.inner-container[b-yzyo4i61op] {
+    height: 100%;
+}
+
+.title-container[b-yzyo4i61op] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.title-container h1[b-yzyo4i61op] {
+    font-size: 1rem;
+}
+
+.form-container[b-yzyo4i61op] {
+    padding: 1rem 2rem;
+    width: 50%;
+}
+
+.form-item[b-yzyo4i61op] {
+    margin-bottom: 1rem;
+}
+
+.form-item label[b-yzyo4i61op] {
+    margin-bottom: 0.5rem;
+}
+
+
+.button-container button[b-yzyo4i61op] {
+    background-color: var(--tea-green);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    border: none;
+}   
+
+.button-container a[b-yzyo4i61op] {
+    text-decoration: underline;
+    color: black;
+}

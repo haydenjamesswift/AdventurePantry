@@ -1,0 +1,39 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Inventories.Interfaces
+
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
+@inject IDeleteInventoryUseCase DeleteInventoryUseCase
+@inject NavigationManager NavigationManager
+
+<div class="inventory-table">
+    <div class="table-header">
+        <div class="table-row">
+            <div class="table-cell">PackageID</div>
+            <div class="table-cell">Name</div>
+            <div class="table-cell">Quantity</div>
+            <div class="table-cell">Price</div>
+            <div class="table-cell"></div>
+            <div class="table-cell"></div>
+        </div>
+    </div>
+    <div class="table-body">
+        @foreach (var inventory in inventories) {
+            <InventoryListItem Inventory="inventory"></InventoryListItem>
+        }
+    </div>
+</div>
+
+@code {
+    // Define inventories
+    private List<Inventory>? inventories;
+
+    // Filter inventories
+    [Parameter] 
+    public string? SearchInventoryFilter { get; set; }
+
+    // Get inventories
+    protected override async Task OnParametersSetAsync() {
+        inventories = (await ViewInventoriesByNameUseCase.ExecuteAsync(SearchInventoryFilter??string.Empty)).ToList();
+    }
+}

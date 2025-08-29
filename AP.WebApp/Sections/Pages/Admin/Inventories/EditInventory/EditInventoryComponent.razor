@@ -1,0 +1,86 @@
+﻿<!-- Imports -->
+@using AP.CoreBusiness
+@using AP.UseCases.Inventories
+@using AP.UseCases.Inventories.Interfaces
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+
+<!-- Injections -->
+@inject IFetchInventoryByIdUseCase FetchInventoryByIdUseCase
+@inject IEditInventoryUseCase EditInventoryUseCase
+@inject IDeleteInventoryUseCase DeleteInventoryUseCase
+@inject NavigationManager NavigationManager
+
+
+<!-- Page Definitions -->
+@page "/admin/edit-inventory/{invId:int}"
+@layout AdminLayout
+
+
+<div class="inner-container">
+
+    <div class="title-container">
+        <h1>Edit Inventory</h1>
+    </div>
+    <div class="form-container">
+        @if (inventory is not null) {
+            <EditForm Model="inventory" FormName="formInventory" OnValidSubmit="Update">
+
+                <InputNumber @bind-Value='inventory.InventoryId' hidden></InputNumber>
+
+                <div class="form-item">
+                    <label for="name">Inventory Name</label>
+                    <InputText 
+                        id="name"
+                        @bind-Value="inventory.InventoryName"
+                        class="form-control">
+                    </InputText>
+                </div>
+                <div class="form-item">
+                    <label for="quantity">Quantity</label>
+                    <InputNumber 
+                        id="quantity"
+                        @bind-Value="inventory.Quantity"
+                        class="form-control">
+                    </InputNumber>
+                </div>
+                <div class="form-item">
+                    <label for="price">Price</label>
+                    <InputNumber 
+                        id="price"
+                        @bind-Value="inventory.Price"
+                        class="form-control">
+                    </InputNumber>
+                </div>
+                <div class="button-container">
+                    <a class="cancel-button" href="/admin/view-inventories">Cancel</a>
+                    <button type="button" onclick="Delete()">Delete</button>
+                    <button type='submit'>Save Updates</button>
+                </div>
+            </EditForm> 
+        }
+    </div>
+
+</div>
+
+@code {
+
+    // Get Inventory Id from URL Query
+    [Parameter]
+    public int invId {get; set; }
+
+    // Fetch Inventory 
+    [SupplyParameterFromForm]
+    private Inventory? inventory { get; set; }
+    protected override async Task OnParametersSetAsync()
+    {
+        this.inventory ??= await FetchInventoryByIdUseCase.ExecuteAsync(this.invId);
+    }
+
+    public async Task Update() 
+    {
+        if (inventory is not null) {
+            await EditInventoryUseCase.ExecuteAsync(inventory);
+            NavigationManager.NavigateTo("/admin/view-inventories");
+        }
+    }
+}

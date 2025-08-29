@@ -1,0 +1,58 @@
+.tables-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inventory-table {
+    background-color: #fff;
+    flex: 1;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.row:hover {
+    background-color: aliceblue;
+}
+
+.row:first-child {
+    background-color: red;
+}
+
+.row:first-child, 
+.row:nth-child(2) {
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cell:nth-child(2) {
+    flex: 3;
+}
+
+.cell button {
+    text-decoration: underline;
+}
+
+
+.cell input {
+    width: 3rem;
+}

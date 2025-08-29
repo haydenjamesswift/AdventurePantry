@@ -1,0 +1,40 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Products.Interfaces
+
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+@inject NavigationManager NavigationManager
+
+<div class="product-table">
+    <div class="table-header">
+        <div class="table-row">
+            <div class="table-cell">Product ID</div>
+            <div class="table-cell">Name</div>
+            <div class="table-cell">Quantity</div>
+            <div class="table-cell">Price</div>
+            <div class="table-cell"></div>
+            <div class="table-cell"></div>
+        </div>
+    </div>
+    @if (products is not null && products.Count > 0) {
+        <div class="table-body">
+            @foreach (var product in products) {
+                <ProductListItem @rendermode="InteractiveServer" Product="product"></ProductListItem>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    // Define inventories
+    private List<Product>? products;
+
+    // Filter inventories
+    [Parameter] 
+    public string? SearchProductsFilter { get; set; }
+
+    // Get inventories
+    protected override async Task OnParametersSetAsync() {
+        products = (await ViewProductsByNameUseCase.ExecuteAsync(SearchProductsFilter??string.Empty)).ToList();
+    }
+}

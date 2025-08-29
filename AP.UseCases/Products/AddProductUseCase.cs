@@ -1,7 +1,8 @@
 using System;
 using AP.CoreBusiness;
 using AP.UseCases.PluginInterfaces;
-using AP.UseCases.Products;
+using AP.UseCases.Inventories;
+using AP.UseCases.Products.Interfaces;
 
 public class AddProductUseCase : IAddProductUseCase
 {

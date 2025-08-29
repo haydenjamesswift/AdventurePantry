@@ -1,0 +1,145 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases.Inventories.Interfaces
+
+
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
+
+
+<div class="tables-container">
+    
+    <!-- All Inventories-->
+    <div class="inventory-table">
+        <div class="row">
+            <div class='cell'>Search Inventories</div>
+        </div>
+        <div class='row'>
+            <div class='cell'>Inventory ID</div>
+            <div class='cell'>Inventory Name</div>
+            <div class='cell'>Price</div>
+            <div class='cell'></div>
+        </div>
+
+        @if (inventories is not null && inventories.Count > 0) {
+            @foreach (var inv in inventories) {
+                <div class='row'>
+                    <div class='cell'>@inv.InventoryId</div>
+                    <div class='cell'>@inv.InventoryName</div>
+                    <div class='cell'>$@inv.Price</div>
+                    <div class='cell'>
+                        <button type="button" @onclick="() => HandleAddInventory(inv)">Add</button>
+                    </div>
+                </div>
+            }
+        }
+
+        @if (inventories is not null && inventories.Count == 0) {
+            <div class="row">
+                <div class='cell'>No Matches</div>
+            </div>
+        }
+    </div>
+
+     <!-- Selected ProductInventories-->
+    <div class="inventory-table">
+        <div class="row">
+            <div class='cell'>Added Inventories</div>
+        </div>
+        <div class='row'>
+            <div class='cell'>Inventory ID</div>
+            <div class='cell'>Inventory Name</div>
+            <div class='cell'>Quantity</div>
+            <div class='cell'></div>
+        </div>
+
+        @if (selectedProductInventories is not null && selectedProductInventories.Count > 0) {
+            @foreach (var inv in selectedProductInventories) {
+                <div class='row'>
+                    <div class='cell'>@inv.InventoryId</div>
+                    <div class='cell'>@inv.Inventory.InventoryName</div>
+                    <div class='cell'>
+                        <input type='number' @bind-value="inv.InventoryQuantity"/>
+                    </div>
+                    <div class='cell'>
+                        <button type="button" @onclick="() => HandleRemoveInventory(inv)">Remove</button>
+                    </div>
+                </div>
+            }
+        }
+
+        @if (selectedProductInventories is not null && selectedProductInventories.Count == 0) {
+            <div class="row">
+                <div class='cell'>No Inventories Added</div>
+            </div>
+        }
+    </div>
+
+
+</div>
+
+
+
+
+@code {
+    private List<Inventory> inventories = new List<Inventory>();
+
+    // Filter
+    [Parameter]
+    public string? SearchInventoryFilter { get; set; }
+
+    // Get inventories
+    protected override async Task OnParametersSetAsync() {
+        if (SearchInventoryFilter != "") {
+            inventories = (await ViewInventoriesByNameUseCase.ExecuteAsync(SearchInventoryFilter??string.Empty)).ToList();
+        }
+        else {
+            inventories = new List<Inventory>();
+        }
+    } 
+
+
+    // Pass selectedInventories to parent component
+    [Parameter]
+    public EventCallback<List<ProductInventory>> SelectedProductInventoriesChanged { get; set; }
+
+    // Add Inventories to Selected
+    private List<ProductInventory> selectedProductInventories = new List<ProductInventory>();
+    
+    public async Task HandleAddInventory(Inventory inventory) {
+
+        Console.WriteLine("Adding");
+
+        if (selectedProductInventories.Any(x => x.InventoryId == inventory.InventoryId)) {
+            return;
+        }
+
+        var productInventory = new ProductInventory {
+            InventoryId = inventory.InventoryId,
+            Inventory = inventory,
+            InventoryQuantity = 1
+        };
+
+        selectedProductInventories.Add(productInventory);
+        
+
+        // Notify parent
+        await SelectedProductInventoriesChanged.InvokeAsync(selectedProductInventories);
+
+        StateHasChanged();
+    }
+    
+
+    public async Task HandleRemoveInventory(ProductInventory productInventory) {
+
+        // Return if not in list
+        if (!selectedProductInventories.Contains(productInventory)) {
+            return;
+        }
+
+        selectedProductInventories.Remove(productInventory);
+
+        // Notify parent
+        await SelectedProductInventoriesChanged.InvokeAsync(selectedProductInventories);
+
+        StateHasChanged();
+    }
+}

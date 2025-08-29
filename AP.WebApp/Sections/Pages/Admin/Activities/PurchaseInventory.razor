@@ -1,0 +1,27 @@
+﻿@using AP.UseCases.Inventories.Interfaces
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+@using AP.WebApp.Sections.Pages.Admin.Components.Common
+@using static AP.WebApp.Sections.Pages.Admin.Components.Common.AutoCompleteComponent
+
+
+@page "/admin/create-purchase"
+@layout AdminLayout
+@rendermode InteractiveServer
+
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
+
+<AutoCompleteComponent Label="Inventory" SearchFunction="SearchInventory"></AutoCompleteComponent>
+
+@code {
+
+    public List<ItemViewModel>? SearchInventory(string name){
+        var list = ViewInventoriesByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();
+        if (list is null) {
+            return null;
+        } 
+
+        return (list.Select(x => new ItemViewModel { Id = x.InventoryId, Name = x.InventoryName }))?.ToList();
+    }
+
+
+}

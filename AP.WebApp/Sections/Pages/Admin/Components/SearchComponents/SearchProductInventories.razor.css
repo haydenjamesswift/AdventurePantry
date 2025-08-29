@@ -1,0 +1,59 @@
+/* --------------- SEARCH BAR --------------- */
+.search-container {
+    display: flex;
+    width: 100%;
+}
+
+.search-container .text-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-bottom: 0;
+}
+
+.search-container button {
+    background-color: var(--tea-green);
+    width: 2.5rem;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.search-container button img {
+    width: 1.5rem;
+}
+
+/* --------------- INVENTORIES DIV --------------- */
+.inventories-container {
+    background-color: #fff;
+    box-shadow: 4px 2px 10px 2px rgba(0,0,0,0.2);
+    overflow-y: scroll;
+    max-height: 300px;
+    width: calc(100% - 2.5rem);
+}
+
+.row {
+    display: flex;
+}
+
+.row:hover {
+    background-color: aliceblue;
+}
+
+.cell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.cell button:hover {
+    cursor: pointer;
+}

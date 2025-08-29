@@ -1,0 +1,31 @@
+﻿@using AP.CoreBusiness
+@using AP.UseCases.Products.Interfaces
+
+@inject IDeleteProductUseCase DeleteProductUseCase
+@inject NavigationManager NavigationManager
+
+@if (this.Product is not null) {
+     <div class="table-row">
+        <div class="table-cell">@Product.ProductId</div>
+        <div class="table-cell">@Product.ProductName</div>
+        <div class="table-cell">@Product.Quantity</div>
+        <div class="table-cell">@Product.Price</div>
+        <div class="table-cell">
+            <a href="/admin/edit-product/@Product.ProductId">Edit</a>
+        </div>
+        <div class="table-cell">
+            <button type="button" @onclick="() => HandleDeleteProduct(Product.ProductId)">Delete</button>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Product? Product { get; set; }
+
+    // Delete inventory
+    private async Task HandleDeleteProduct(int productId) {
+        await DeleteProductUseCase.ExecuteAsync(productId);
+        NavigationManager.Refresh();
+    }
+}

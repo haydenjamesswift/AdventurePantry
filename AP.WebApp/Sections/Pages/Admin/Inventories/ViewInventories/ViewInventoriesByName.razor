@@ -1,0 +1,44 @@
+﻿@page "/admin/view-inventories"
+@layout AdminLayout
+
+
+@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Inventories.Interfaces
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+@using AP.WebApp.Sections.Pages.Admin
+@using AP.WebApp.Sections.Pages.Admin.Components
+@using AP.WebApp.Sections.Pages.Admin.Components.InventoryComponents
+@using AP.WebApp.Sections.Pages.Admin.Components.SearchComponents
+
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
+
+
+<div class='inner-container'>
+    <div class='page-title-container'>
+        <h1>Inventory Manager</h1>
+    </div>
+    <div class='page-description-container'>
+        <p>Lorem ipsum dolor</p>
+
+        <!-- SearchComponent: Takes user input and passes it to InventoryTable using EventCallback -->
+        <SearchComponent OnSearch="HandleSearch"></SearchComponent>
+
+        <!-- InventoryTable: Takes parameter from SearchComponenet and uses it to filter inventory list --> 
+        <InventoryTable SearchInventoryFilter=@inventorySearchQuery></InventoryTable>
+
+        <div class="add-item-button-container">
+            <button>
+                <a href="/admin/add-inventory">Add Item</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string? inventorySearchQuery;
+    private void HandleSearch(string searchFilter) {
+        inventorySearchQuery = searchFilter;
+    }
+
+}   
