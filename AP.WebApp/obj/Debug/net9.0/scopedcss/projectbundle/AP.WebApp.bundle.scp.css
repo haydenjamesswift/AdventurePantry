@@ -160,6 +160,83 @@
 #blazor-error-ui[b-nfri6d1bpw] {
     display: none;
 }
+/* _content/AP.WebApp/Sections/Pages/Admin/Activities/PurchaseInventory.razor.rz.scp.css */
+.inner-container[b-a6na1nnzmh] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container[b-a6na1nnzmh] {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1[b-a6na1nnzmh] {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container[b-a6na1nnzmh] {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group[b-a6na1nnzmh] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label[b-a6na1nnzmh] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group[b-a6na1nnzmh]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container[b-a6na1nnzmh] {
+    padding: 1rem 0;
+}
+
+
+.button-container button[b-a6na1nnzmh] {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+/* _content/AP.WebApp/Sections/Pages/Admin/Components/Common/AutoCompleteComponent.razor.rz.scp.css */
+.container[b-kblm1r8piv] {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label[b-kblm1r8piv] {
+    margin-bottom: 0.25rem;
+}
+
+.container input[b-kblm1r8piv] {
+    padding: 0.5rem
+}
+
+.results-container[b-kblm1r8piv] {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.results-container .row[b-kblm1r8piv] {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.selected[b-kblm1r8piv],
+.results-container .row:hover[b-kblm1r8piv] {
+    background-color: aliceblue;
+    cursor: pointer;
+}
 /* _content/AP.WebApp/Sections/Pages/Admin/Components/InventoryComponents/InventoryListItem.razor.rz.scp.css */
 .table-row[b-35t7xfl2kj] {
     display: flex;
@@ -653,6 +730,55 @@
 
 .cell input[b-tl7mhwqt8j] {
     width: 3rem;
+}
+
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/CreateProduct/CreateProduct.razor.rz.scp.css */
+.inner-container[b-ykgrlhnwu2] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container[b-ykgrlhnwu2] {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1[b-ykgrlhnwu2] {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container[b-ykgrlhnwu2] {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group[b-ykgrlhnwu2] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label[b-ykgrlhnwu2] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group[b-ykgrlhnwu2]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container[b-ykgrlhnwu2] {
+    padding: 1rem 0;
+}
+
+
+.button-container button[b-ykgrlhnwu2] {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
 }
 
 /* _content/AP.WebApp/Sections/Pages/Admin/Products/EditProducts/EditProductComponent.razor.rz.scp.css */

@@ -9,6 +9,8 @@ public class InventoryTransaction
     public int InventoryTransactionId { get; set; }
 
     public string PONumber { get; set; } = string.Empty;
+
+    public string ProductionNumber { get; set; } = string.Empty;
     public int InventoryId { get; set; }
 
     [Required]

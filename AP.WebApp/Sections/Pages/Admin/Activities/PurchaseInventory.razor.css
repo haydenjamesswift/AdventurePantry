@@ -1,0 +1,48 @@
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1 {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label {
+    margin-bottom: 0.25rem;
+}
+
+.form-group ::deep input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container {
+    padding: 1rem 0;
+}
+
+
+.button-container button {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+

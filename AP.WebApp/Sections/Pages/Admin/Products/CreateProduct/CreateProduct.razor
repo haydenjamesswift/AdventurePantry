@@ -1,0 +1,111 @@
+﻿<!-- Imports -->
+@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Activities.Interfaces
+@using AP.UseCases.Products.Interfaces
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+@using AP.WebApp.Sections.Pages.Admin.Components.Common
+@using AP.WebApp.ViewModels
+@using static AP.WebApp.Sections.Pages.Admin.Components.Common.AutoCompleteComponent
+
+<!-- Page Definitions -->
+@page "/admin/create-product"
+@layout AdminLayout
+@rendermode InteractiveServer
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+@inject IFetchProductByIdUseCase FetchProductByIdUseCase
+@inject IProduceProductUseCase ProduceProductUseCase
+
+<!-- HTML -->
+<div class="inner-container">
+    <div class="title-container">
+        <h1>Create New Product</h1>
+    </div>
+    <div class="content-container">
+        
+        <EditForm Model="productionViewModel" OnValidSubmit="SaveProductionOrder">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="form-group">
+                <label for="prodNumber">Production Number</label>
+                <InputText
+                    id="po"
+                    @bind-Value="productionViewModel.ProductionNumber"
+                    class="text-input"
+                ></InputText>
+            </div>
+
+            <div class='form-group'>
+                <AutoCompleteComponent
+                    Label="Products"
+                    SearchFunction="SearchProduct"
+                    OnItemSelected="HandleItemSelected"
+                ></AutoCompleteComponent>
+            </div>
+
+            <div class="form-group">
+                <label>Quanitity</label>
+                <InputNumber 
+                    id='quanity'
+                    @bind-Value="productionViewModel.QuantityToProduce"
+                    class="text-input"
+                />
+            </div>
+
+            <div class='button-container'>
+                <button class="button" type="submit">Create Purchase Order</button>
+            </div>
+        
+        </EditForm>
+
+
+
+    </div>
+</div>
+
+<!-- C# -->
+@code {
+    // Create productionViewMode
+    private ProductionViewModel productionViewModel = new ProductionViewModel();
+    private Product selectedProduct; 
+
+    public List<ItemViewModel>? SearchProduct(string name){
+        var list = ViewProductsByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();
+        if (list is null) {
+            return null;
+        } 
+
+        return (list.Select(x => new ItemViewModel { Id = x.ProductId, Name = x.ProductName }))?.ToList();
+    }
+
+    public ItemViewModel? itemSelected;
+    public async void HandleItemSelected(ItemViewModel item) {
+        productionViewModel.ProductId = item.Id;
+        selectedProduct = await FetchProductByIdUseCase.ExecuteAsync(productionViewModel.ProductId);
+        productionViewModel.Product = this.selectedProduct;
+    }
+
+    public async Task SaveProductionOrder() {
+
+
+        if (selectedProduct is null)
+        {
+            Console.WriteLine("No inventory selected.");
+            return; // Or show a validation message
+        }
+
+        await ProduceProductUseCase.ExecuteAsync(
+            productionViewModel.ProductionNumber,
+            selectedProduct,
+            productionViewModel.QuantityToProduce,
+            "Test User"
+        );
+
+        this.productionViewModel = new ProductionViewModel();
+        this.selectedProduct = null;
+    }
+
+
+
+}   

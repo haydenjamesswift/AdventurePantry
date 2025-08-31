@@ -1,0 +1,27 @@
+.container[b-kblm1r8piv] {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label[b-kblm1r8piv] {
+    margin-bottom: 0.25rem;
+}
+
+.container input[b-kblm1r8piv] {
+    padding: 0.5rem
+}
+
+.results-container[b-kblm1r8piv] {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.results-container .row[b-kblm1r8piv] {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.selected[b-kblm1r8piv],
+.results-container .row:hover[b-kblm1r8piv] {
+    background-color: aliceblue;
+    cursor: pointer;
+}
