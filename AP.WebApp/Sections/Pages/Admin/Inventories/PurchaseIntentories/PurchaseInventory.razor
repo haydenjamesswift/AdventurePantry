@@ -15,6 +15,7 @@
 @inject IFetchInventoryByIdUseCase FetchInventoryByIdUseCase
 @inject IPurchaseInventoryUseCase PurchaseInventoryUseCase
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 
 <div class="inner-container">
@@ -22,7 +23,7 @@
         <h1>Purchase Inventory</h1>
     </div>
     <div class="content-container">
-        <EditForm Model="purchaseViewModel" OnValidSubmit="SavePurchaseOrder">
+        <EditForm id="purchase-form" Model="purchaseViewModel" OnValidSubmit="SavePurchaseOrder">
             <DataAnnotationsValidator></DataAnnotationsValidator>
             <ValidationSummary></ValidationSummary>
 
@@ -74,6 +75,13 @@
     // Purchase View Model variable
     public PurchaseViewModel purchaseViewModel = new PurchaseViewModel();
 
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender) {
+            JSRuntime.InvokeVoidAsync("preventFormSubmission", "purchase-form");
+        }
+    }
 
 
     public List<ItemViewModel>? SearchInventory(string name){

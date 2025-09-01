@@ -15,6 +15,7 @@
 @inject IViewProductsByNameUseCase ViewProductsByNameUseCase
 @inject IFetchProductByIdUseCase FetchProductByIdUseCase
 @inject IProduceProductUseCase ProduceProductUseCase
+@inject IJSRuntime JSRuntime
 
 <!-- HTML -->
 <div class="inner-container">
@@ -23,7 +24,7 @@
     </div>
     <div class="content-container">
         
-        <EditForm Model="productionViewModel" OnValidSubmit="SaveProductionOrder">
+        <EditForm id="produce-form" Model="productionViewModel" OnValidSubmit="SaveProductionOrder">
             <DataAnnotationsValidator></DataAnnotationsValidator>
             <ValidationSummary></ValidationSummary>
 
@@ -66,9 +67,20 @@
 
 <!-- C# -->
 @code {
+
+    protected override void OnAfterRender(bool firstRender) {
+        if (firstRender) {
+            JSRuntime.InvokeVoidAsync("preventFormSubmission", "produce-form");
+        }
+    }
+
+
+
+
+
     // Create productionViewMode
     private ProductionViewModel productionViewModel = new ProductionViewModel();
-    private Product selectedProduct; 
+    private Product? selectedProduct; 
 
     public List<ItemViewModel>? SearchProduct(string name){
         var list = ViewProductsByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();

@@ -1,0 +1,120 @@
+﻿<!-- Imports -->
+@using AP.CoreBusiness
+@using AP.UseCases
+@using AP.UseCases.Activities.Interfaces
+@using AP.UseCases.Products.Interfaces
+@using AP.WebApp.Sections.Layouts.AdminPanelLayouts
+@using AP.WebApp.Sections.Pages.Admin.Components.Common
+@using AP.WebApp.ViewModels
+@using static AP.WebApp.Sections.Pages.Admin.Components.Common.AutoCompleteComponent
+
+<!-- Page Definitions -->
+@page "/admin/sell-product"
+@layout AdminLayout
+@rendermode InteractiveServer
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+@inject IFetchProductByIdUseCase FetchProductByIdUseCase
+@inject ISellProductsUseCase SellProductsUseCase
+@inject IJSRuntime JSRuntime
+
+<!-- HTML -->
+<div class="inner-container">
+    <div class="title-container">
+        <h1>Sell Product</h1>
+    </div>
+    <div class="content-container">
+        
+        <EditForm id="produce-form" Model="salesViewModel" OnValidSubmit="SaveSalesOrder">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="form-group">
+                <label for="prodNumber">Sales Order Number</label>
+                <InputText
+                    id="po"
+                    @bind-Value="salesViewModel.SONumber"
+                    class="text-input"
+                ></InputText>
+            </div>
+
+            <div class='form-group'>
+                <AutoCompleteComponent
+                    Label="Products"
+                    SearchFunction="SearchProduct"
+                    OnItemSelected="HandleItemSelected"
+                ></AutoCompleteComponent>
+            </div>
+
+            <div class="form-group">
+                <label>Quanitity</label>
+                <InputNumber 
+                    id='quanity'
+                    @bind-Value="salesViewModel.QuantityToSell"
+                    class="text-input"
+                />
+            </div>
+
+            <div class='button-container'>
+                <button class="button" type="submit">Create Sales Order</button>
+            </div>
+        
+        </EditForm>
+
+
+
+    </div>
+</div>
+
+<!-- C# -->
+@code {
+
+    protected override void OnAfterRender(bool firstRender) {
+        if (firstRender) {
+            JSRuntime.InvokeVoidAsync("preventFormSubmission", "sales-form");
+        }
+    }
+
+
+    // Create productionViewMode
+    private SalesViewModel salesViewModel = new SalesViewModel();
+    private Product? selectedProduct; 
+
+    public List<ItemViewModel>? SearchProduct(string name){
+        var list = ViewProductsByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();
+        if (list is null) {
+            return null;
+        } 
+
+        return (list.Select(x => new ItemViewModel { Id = x.ProductId, Name = x.ProductName }))?.ToList();
+    }
+
+    public ItemViewModel? itemSelected;
+    public async void HandleItemSelected(ItemViewModel item) {
+        salesViewModel.ProductId = item.Id;
+        selectedProduct = await FetchProductByIdUseCase.ExecuteAsync(salesViewModel.ProductId);
+        salesViewModel.Product = this.selectedProduct;
+    }
+
+    public async Task SaveSalesOrder() {
+
+
+        if (selectedProduct is null)
+        {
+            Console.WriteLine("No inventory selected.");
+            return; // Or show a validation message
+        }
+
+        await SellProductsUseCase.ExecuteAsync(
+            salesViewModel.SONumber,
+            selectedProduct,
+            salesViewModel.QuantityToSell,
+            "Test User"
+        );
+
+        this.salesViewModel = new SalesViewModel();
+        this.selectedProduct = null;
+    }
+
+
+
+}   

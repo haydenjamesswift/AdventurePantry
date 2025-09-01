@@ -28,7 +28,6 @@
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Items/HeaderMain.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Layouts/AdminPanelLayouts/AdminLayout.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Layouts/Container.razor.rz.scp.css
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Activities/PurchaseInventory.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Components/Common/AutoCompleteComponent.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Components/InventoryComponents/InventoryListItem.razor.rz.scp.css
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Components/InventoryComponents/InventoryTable.razor.rz.scp.css
@@ -96,8 +95,6 @@
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/6h18f8yjsb-h1s4sie4z3.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/zelnwayuhj-63fj8s7r0e.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/79ewy7uprm-0j3bgjxly4.gz
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/d5fsgkc9lk-k53hmgbzy2.gz
-/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/fso7558wdm-k53hmgbzy2.gz
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/staticwebassets.build.json
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/staticwebassets.build.json.cache
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/staticwebassets.development.json
@@ -108,3 +105,8 @@
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/AP.WebApp.pdb
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/AP.WebApp.genruntimeconfig.cache
 /Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/ref/AP.WebApp.dll
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/1uoy9313kz-tbpj2w4lh6.gz
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Inventories/PurchaseIntentories/PurchaseInventory.razor.rz.scp.css
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/scopedcss/Sections/Pages/Admin/Products/SellProducts/SellProduct.razor.rz.scp.css
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/d5fsgkc9lk-7vi2nfq5fc.gz
+/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/obj/Debug/net9.0/compressed/fso7558wdm-7vi2nfq5fc.gz

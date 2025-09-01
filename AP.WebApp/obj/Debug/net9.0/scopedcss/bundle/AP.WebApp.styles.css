@@ -160,55 +160,6 @@
 #blazor-error-ui[b-nfri6d1bpw] {
     display: none;
 }
-/* _content/AP.WebApp/Sections/Pages/Admin/Activities/PurchaseInventory.razor.rz.scp.css */
-.inner-container[b-a6na1nnzmh] {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.title-container[b-a6na1nnzmh] {
-    border-bottom: 1px solid rgb(0,0,0);
-}
-
-.title-container h1[b-a6na1nnzmh] {
-    padding: 1.4rem 1rem;
-    font-weight: 700;
-}
-
-.content-container[b-a6na1nnzmh] {
-    flex: 1;
-    padding: 1rem;
-}
-
-.form-group[b-a6na1nnzmh] {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    width: 50%;
-}
-
-.form-group label[b-a6na1nnzmh] {
-    margin-bottom: 0.25rem;
-}
-
-.form-group[b-a6na1nnzmh]  input {
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid black;
-}
- 
-.button-container[b-a6na1nnzmh] {
-    padding: 1rem 0;
-}
-
-
-.button-container button[b-a6na1nnzmh] {
-    background-color: var(--tea-green);
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-}
-
 /* _content/AP.WebApp/Sections/Pages/Admin/Components/Common/AutoCompleteComponent.razor.rz.scp.css */
 .container[b-kblm1r8piv] {
     display: flex;
@@ -584,6 +535,55 @@
     text-decoration: underline;
     color: black;
 }
+/* _content/AP.WebApp/Sections/Pages/Admin/Inventories/PurchaseIntentories/PurchaseInventory.razor.rz.scp.css */
+.inner-container[b-unnu0gruqj] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container[b-unnu0gruqj] {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1[b-unnu0gruqj] {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container[b-unnu0gruqj] {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group[b-unnu0gruqj] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label[b-unnu0gruqj] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group[b-unnu0gruqj]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container[b-unnu0gruqj] {
+    padding: 1rem 0;
+}
+
+
+.button-container button[b-unnu0gruqj] {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
 /* _content/AP.WebApp/Sections/Pages/Admin/Inventories/ViewInventories/ViewInventoriesByName.razor.rz.scp.css */
 /* ---------------- Container Styles ---------------- */
 .inner-container[b-u7qb19299c] {
@@ -833,6 +833,55 @@
     text-decoration: underline;
     color: black;
 }
+/* _content/AP.WebApp/Sections/Pages/Admin/Products/SellProducts/SellProduct.razor.rz.scp.css */
+.inner-container[b-9r6xx97tzq] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container[b-9r6xx97tzq] {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1[b-9r6xx97tzq] {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container[b-9r6xx97tzq] {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group[b-9r6xx97tzq] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label[b-9r6xx97tzq] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group[b-9r6xx97tzq]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container[b-9r6xx97tzq] {
+    padding: 1rem 0;
+}
+
+
+.button-container button[b-9r6xx97tzq] {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
 /* _content/AP.WebApp/Sections/Pages/Admin/Products/ViewProducts/ProductListComponent.razor.rz.scp.css */
 /* ---------------- Container Styles ---------------- */
 .inner-container[b-wjr73qdue1] {

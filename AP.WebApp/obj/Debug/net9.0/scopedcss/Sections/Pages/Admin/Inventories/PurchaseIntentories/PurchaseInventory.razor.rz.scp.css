@@ -1,0 +1,48 @@
+.inner-container[b-unnu0gruqj] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title-container[b-unnu0gruqj] {
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+.title-container h1[b-unnu0gruqj] {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+}
+
+.content-container[b-unnu0gruqj] {
+    flex: 1;
+    padding: 1rem;
+}
+
+.form-group[b-unnu0gruqj] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.form-group label[b-unnu0gruqj] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group[b-unnu0gruqj]  input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid black;
+}
+ 
+.button-container[b-unnu0gruqj] {
+    padding: 1rem 0;
+}
+
+
+.button-container button[b-unnu0gruqj] {
+    background-color: var(--tea-green);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+

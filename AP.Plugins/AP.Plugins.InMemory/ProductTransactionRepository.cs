@@ -8,11 +8,9 @@ public class ProductTransactionRepository : IProductTransactionRepository
 {
 
     private List<ProductTransaction> _productTransactions = new List<ProductTransaction>();
-
     public readonly IProductRepository productRepository;
     public readonly IInventoryTransactionRepository inventoryTransactionRepository;
     public readonly IInventoryRepository inventoryRepository;
-
     public ProductTransactionRepository(IProductRepository productRepository, IInventoryTransactionRepository inventoryTransactionRepository, IInventoryRepository inventoryRepository)
     {
         this.productRepository = productRepository;
@@ -53,5 +51,23 @@ public class ProductTransactionRepository : IProductTransactionRepository
             TransactionDate = DateTime.Now,
             DoneBy = doneBy
         });
+    }
+
+    public Task SellProductAsync(string salesOrderNumber, Product product, int quantity, string doneBy)
+    {
+        this._productTransactions.Add(new ProductTransaction
+        {
+            SONumber = salesOrderNumber,
+            ProductId = product.ProductId,
+            QuantityBefore = product.Quantity,
+            QuantityAfter = product.Quantity - quantity,
+            ActivityType = ProductTransactionType.SellProduct,
+            UnitPrice = product.Price,
+            TransactionDate = DateTime.Now,
+            DoneBy = doneBy
+        });
+
+        return Task.CompletedTask; 
+         
     }
 }
