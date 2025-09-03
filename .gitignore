@@ -1,0 +1,17 @@
+.DS_Store
+bin/
+obj/
+*.dll
+*.pdb
+*.runtimeconfig.json
+*.deps.json
+*.staticwebassets.*
+*.cache
+*.AssemblyInfoInputs.cache
+*.AssemblyReference.cache
+*.g.props
+*.g.targets
+*.nuget.dgspec.json
+*.genruntimeconfig.cache
+*.gz
+*.json.cache

@@ -441,15 +441,6 @@
 .cell button:hover[b-qav5eth2qq] {
     cursor: pointer;
 }
-/* _content/AP.WebApp/Sections/Pages/Admin/Dashboard/DashboardComponent.razor.rz.scp.css */
-.inner-container[b-jje01w0sz3] {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* _content/AP.WebApp/Sections/Pages/Admin/Inventories/AddInventory/AddInventory.razor.rz.scp.css */
 .inner-container[b-yzyo4i61op] {
     height: 100%;
@@ -938,15 +929,163 @@
     color: var(--van-dyke);
 }
 
-/* _content/AP.WebApp/Sections/Pages/Admin/Settings/SettingsComponent.razor.rz.scp.css */
-.inner-container[b-wro0d6axnc] {
-    width: 100%;
+/* _content/AP.WebApp/Sections/Pages/Admin/Reporting/InventoryTransactionReport.razor.rz.scp.css */
+.inner-container[b-nfz8s63wew] {
     height: 100%;
+}
+
+.title-container[b-nfz8s63wew] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid black;
+    font-weight: 700;
+}
+
+.content-container[b-nfz8s63wew] {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* ---------------- Form ---------------- */
+.form-container[b-nfz8s63wew] {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
+.form-group[b-nfz8s63wew] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group:nth-child(5)[b-nfz8s63wew],
+.form-group:last-child[b-nfz8s63wew] {
+    align-self: flex-end;
+    width: 200px;;
+}
+
+.form-group label[b-nfz8s63wew] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group input[b-nfz8s63wew],
+.form-group select[b-nfz8s63wew] {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+}
+ 
+.form-group button[b-nfz8s63wew] {
+    background-color: var(--tea-green);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* ---------------- Inventory Transactions Table ---------------- */
+.inventory-transactions-table[b-nfz8s63wew] {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.table-row[b-nfz8s63wew] {
+    display: flex;
+    padding: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.table-cell[b-nfz8s63wew] {
+    padding: 0.75rem;
+    text-align: center;
+    flex: 1;
+    font-weight: 500;
+}
+
+.table-cell:nth-child(2)[b-nfz8s63wew] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-nfz8s63wew] {
+    border-right: 0;
+}
+/* _content/AP.WebApp/Sections/Pages/Admin/Reporting/ProductTransactionReport.razor.rz.scp.css */
+.inner-container[b-x1egtpw0j8] {
+    height: 100%;
+}
+
+.title-container[b-x1egtpw0j8] {
+    padding: 1.4rem 1rem;
+    border-bottom: 1px solid black;
+    font-weight: 700;
+}
+
+.content-container[b-x1egtpw0j8] {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* ---------------- Form ---------------- */
+.form-container[b-x1egtpw0j8] {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group[b-x1egtpw0j8] {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:nth-child(5)[b-x1egtpw0j8],
+.form-group:last-child[b-x1egtpw0j8] {
+    align-self: flex-end;
+    width: 200px;;
+}
+
+.form-group label[b-x1egtpw0j8] {
+    margin-bottom: 0.25rem;
+}
+
+.form-group input[b-x1egtpw0j8],
+.form-group select[b-x1egtpw0j8] {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+}
+ 
+.form-group button[b-x1egtpw0j8] {
+    background-color: var(--tea-green);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* ---------------- Inventory Transactions Table ---------------- */
+.inventory-transactions-table[b-x1egtpw0j8] {
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+}
+
+.table-row[b-x1egtpw0j8] {
+    display: flex;
+    padding: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.table-cell[b-x1egtpw0j8] {
+    padding: 0.75rem;
+    text-align: center;
+    flex: 1;
+    font-weight: 500;
+}
+
+.table-cell:nth-child(2)[b-x1egtpw0j8] {
+    flex: 3;
+}
+
+.table-cell:last-child[b-x1egtpw0j8] {
+    border-right: 0;
+}
 /* _content/AP.WebApp/Sections/Pages/Main/Home/Home.razor.rz.scp.css */
 .page-container[b-z0o8eo8ltp] {
     width: 100%;

@@ -29,7 +29,7 @@ public class InventoryTransaction
     public DateTime TransactionDate { get; set; }
 
     [Required]
-    public string DoneBy { get; set; }
+    public string DoneBy { get; set; } = string.Empty;
     public Inventory Inventory { get; set; }
 
 }

@@ -14,10 +14,10 @@ public class InventoryRepository : IInventoryRepository
     {
         _inventories = new List<Inventory>()
         {
-            new Inventory { InventoryId = 1, InventoryName = "Bike Seat", Quantity = 10, Price = 15},
-            new Inventory { InventoryId = 2, InventoryName = "Bike Frame", Quantity = 6, Price = 25},
-            new Inventory { InventoryId = 3, InventoryName = "Bike Pedals", Quantity = 16, Price = 10},
-            new Inventory { InventoryId = 4, InventoryName = "Bike Wheels", Quantity = 24, Price = 10}
+            new Inventory { InventoryId = 1, InventoryName = "Bike Seat", Quantity = 100, Price = 15},
+            new Inventory { InventoryId = 2, InventoryName = "Bike Frame", Quantity = 100, Price = 25},
+            new Inventory { InventoryId = 3, InventoryName = "Bike Pedals", Quantity = 200, Price = 10},
+            new Inventory { InventoryId = 4, InventoryName = "Bike Wheels", Quantity = 200, Price = 10}
         };
     }
 

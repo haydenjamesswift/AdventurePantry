@@ -9,4 +9,6 @@ public interface IInventoryTransactionRepository
 
     void ProduceAsync(string productionNumber, Inventory inventory, int quantity, double price, string doneBy);
 
+    Task<IEnumerable<InventoryTransaction>> SearchInventoryTransactionsAsync(string inventoryName, DateTime? dateFrom, DateTime? dateTo, InventoryTransactionType? transactionType);
+
 }

@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AP.Plugins", "AP.Plugins", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP.Plugins.InMemory", "AP.Plugins\AP.Plugins.InMemory\AP.Plugins.InMemory.csproj", "{ADA3B706-2C93-466C-B83C-7A64096C4A0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP.Plugins.EFCoreSQL", "AP.Plugins\AP.Plugins.EFCoreSQL\AP.Plugins.EFCoreSQL.csproj", "{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,11 +73,24 @@ Global
 		{ADA3B706-2C93-466C-B83C-7A64096C4A0A}.Release|x64.Build.0 = Release|Any CPU
 		{ADA3B706-2C93-466C-B83C-7A64096C4A0A}.Release|x86.ActiveCfg = Release|Any CPU
 		{ADA3B706-2C93-466C-B83C-7A64096C4A0A}.Release|x86.Build.0 = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|x64.Build.0 = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ADA3B706-2C93-466C-B83C-7A64096C4A0A} = {8C7198A3-CF76-2D0D-B922-7B346B7A2AFB}
+		{9EDEA8F8-935F-41E1-B23E-B4037B4282ED} = {8C7198A3-CF76-2D0D-B922-7B346B7A2AFB}
 	EndGlobalSection
 EndGlobal

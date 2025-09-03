@@ -23,7 +23,7 @@ public class ProductTransaction
     public ProductTransactionType ActivityType { get; set; }
 
     [Required]
-    public double? UnitPrice { get; set; }
+    public double UnitPrice { get; set; }
 
     [Required]
     public DateTime TransactionDate { get; set; }

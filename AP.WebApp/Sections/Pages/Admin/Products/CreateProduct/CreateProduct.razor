@@ -75,15 +75,12 @@
     }
 
 
-
-
-
     // Create productionViewMode
     private ProductionViewModel productionViewModel = new ProductionViewModel();
     private Product? selectedProduct; 
 
-    public List<ItemViewModel>? SearchProduct(string name){
-        var list = ViewProductsByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();
+    public async Task<List<ItemViewModel>>? SearchProduct(string name){
+        var list = await ViewProductsByNameUseCase.ExecuteAsync(name);
         if (list is null) {
             return null;
         } 
@@ -93,6 +90,11 @@
 
     public ItemViewModel? itemSelected;
     public async void HandleItemSelected(ItemViewModel item) {
+
+        if (item is null) {
+            Console.WriteLine("HERE");
+        }
+
         productionViewModel.ProductId = item.Id;
         selectedProduct = await FetchProductByIdUseCase.ExecuteAsync(productionViewModel.ProductId);
         productionViewModel.Product = this.selectedProduct;
@@ -106,6 +108,8 @@
             Console.WriteLine("No inventory selected.");
             return; // Or show a validation message
         }
+
+        Console.WriteLine("Producing product");
 
         await ProduceProductUseCase.ExecuteAsync(
             productionViewModel.ProductionNumber,

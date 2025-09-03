@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AP.WebApp
 build_property.RootNamespace = AP.WebApp
@@ -80,10 +88,6 @@ build_metadata.AdditionalFiles.CssScope = b-m5t5yq58a8
 build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vQ29tcG9uZW50cy9TZWFyY2hDb21wb25lbnRzL1NlYXJjaFByb2R1Y3RJbnZlbnRvcmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qav5eth2qq
 
-[/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Admin/Dashboard/DashboardComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vRGFzaGJvYXJkL0Rhc2hib2FyZENvbXBvbmVudC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-jje01w0sz3
-
 [/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Admin/Inventories/AddInventory/AddInventory.razor]
 build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vSW52ZW50b3JpZXMvQWRkSW52ZW50b3J5L0FkZEludmVudG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-yzyo4i61op
@@ -124,9 +128,13 @@ build_metadata.AdditionalFiles.CssScope = b-9r6xx97tzq
 build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vUHJvZHVjdHMvVmlld1Byb2R1Y3RzL1Byb2R1Y3RMaXN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-wjr73qdue1
 
-[/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Admin/Settings/SettingsComponent.razor]
-build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vU2V0dGluZ3MvU2V0dGluZ3NDb21wb25lbnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-wro0d6axnc
+[/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Admin/Reporting/InventoryTransactionReport.razor]
+build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vUmVwb3J0aW5nL0ludmVudG9yeVRyYW5zYWN0aW9uUmVwb3J0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-nfz8s63wew
+
+[/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Admin/Reporting/ProductTransactionReport.razor]
+build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvQWRtaW4vUmVwb3J0aW5nL1Byb2R1Y3RUcmFuc2FjdGlvblJlcG9ydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-x1egtpw0j8
 
 [/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.WebApp/Sections/Pages/Main/Home/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = U2VjdGlvbnMvUGFnZXMvTWFpbi9Ib21lL0hvbWUucmF6b3I=

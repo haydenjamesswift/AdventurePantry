@@ -71,3 +71,27 @@ input {
 	font-size: 1rem;
 	font-family: inherit;
 }
+
+@media print {
+
+	body * {
+		visibility: hidden;
+	}
+
+	#printarea, #printarea * {
+		visibility: visible;
+	}
+
+	
+
+	#printarea {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+	}
+
+	#do-not-print {
+		visibility: none;
+	}
+}
