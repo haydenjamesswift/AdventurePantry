@@ -18,8 +18,10 @@
         </div>
     </div>
     <div class="table-body">
-        @foreach (var inventory in inventories) {
-            <InventoryListItem Inventory="inventory"></InventoryListItem>
+        @if (inventories is not null && inventories.Count > 0) {
+            @foreach (var inventory in inventories) {
+                <InventoryListItem Inventory="inventory"></InventoryListItem>
+            }
         }
     </div>
 </div>

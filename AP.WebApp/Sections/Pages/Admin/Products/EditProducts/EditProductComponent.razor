@@ -20,55 +20,57 @@
         <h1>Edit an Existing Product</h1>
     </div>
     <div class="form-container">
-    <EditForm Model="product" FormName="formEditProduct" OnValidSubmit="Update">
-        <DataAnnotationsValidator></DataAnnotationsValidator>
+    @if (product is not null) {
+        <EditForm Model="product" FormName="formEditProduct" OnValidSubmit="Update">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
 
-        <div class='form-item'>
-            <label for="name">Product Name</label>
-            <InputText 
-                id="name"
-                @bind-Value="product.ProductName"
-                class="form-control">
-            </InputText>
-            <ValidationMessage For="() => product.ProductName">This field is required.</ValidationMessage>
-        </div>
+            <div class='form-item'>
+                <label for="name">Product Name</label>
+                <InputText 
+                    id="name"
+                    @bind-Value="product.ProductName"
+                    class="form-control">
+                </InputText>
+                <ValidationMessage For="() => product.ProductName">This field is required.</ValidationMessage>
+            </div>
 
-        <div class='form-item'>
-            <label for="name">Quantity</label>
-            <InputNumber 
-                id="name"
-                @bind-Value="product.Quantity"
-                class="form-control">
-            </InputNumber>
-            <ValidationMessage For="() => product.Quantity"></ValidationMessage>
-        </div>
+            <div class='form-item'>
+                <label for="name">Quantity</label>
+                <InputNumber 
+                    id="name"
+                    @bind-Value="product.Quantity"
+                    class="form-control">
+                </InputNumber>
+                <ValidationMessage For="() => product.Quantity"></ValidationMessage>
+            </div>
 
-        <div class='form-item'>
-            <label for="name">Price</label>
-            <InputNumber 
-                id="name"
-                @bind-Value="product.Price"
-                class="form-control">
-            </InputNumber>
-            <ValidationMessage For="() => product.Price"></ValidationMessage>
-        </div>
+            <div class='form-item'>
+                <label for="name">Price</label>
+                <InputNumber 
+                    id="name"
+                    @bind-Value="product.Price"
+                    class="form-control">
+                </InputNumber>
+                <ValidationMessage For="() => product.Price"></ValidationMessage>
+            </div>
 
-        <!-- Product Inventories -->
-        <div class='form-item'>
-            <label>Inventories</label>
-            <AddProductInventories Product="this.product"></AddProductInventories>
-            <ValidationMessage For="() => product.ProductInventories"></ValidationMessage>
-        </div>
-
-
+            <!-- Product Inventories -->
+            <div class='form-item'>
+                <label>Inventories</label>
+                <AddProductInventories Product="this.product"></AddProductInventories>
+                <ValidationMessage For="() => product.ProductInventories"></ValidationMessage>
+            </div>
 
 
-        <br/>
-        <div class="button-container">
-            <button type='submit'>Update</button>
-            <a class="cancel-button" href="/admin/view-products">Cancel</a>
-        </div>
-    </EditForm>
+
+
+            <br/>
+            <div class="button-container">
+                <button type='submit'>Update</button>
+                <a class="cancel-button" href="/admin/view-products">Cancel</a>
+            </div>
+        </EditForm>
+    }
     </div>
 </div> 
 
@@ -79,7 +81,6 @@
     public int prodId { get; set; }
 
     // Fetch Product by ProductId
-    [SupplyParameterFromForm]
     private Product? product { get; set; }
     protected override async Task OnParametersSetAsync() 
     {

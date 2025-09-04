@@ -1,10 +1,13 @@
 ﻿<!-- Imports -->
 @using AP.CoreBusiness
 @using AP.UseCases.Inventories
+@using AP.UseCases.Products.Interfaces
 @using AP.WebApp.Sections.Layouts.AdminPanelLayouts
 
 <!-- Injections -->
 @inject IAddInventoryUseCase AddInventoryUseCase
+@inject IAddProductUseCase AddProductUseCase
+@inject IEditProductUseCase EditProductUseCase
 @inject NavigationManager NavigationManager
 
 <!-- Page Definitions -->
@@ -19,6 +22,7 @@
     <div class="form-container">
     <EditForm Model="inventory" FormName="formInventory" OnValidSubmit="Save">
         <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
 
         <div class='form-item'>
             <label for="name">Inventory Name</label>
@@ -58,10 +62,19 @@
 
 @code {
     [SupplyParameterFromForm]
-    private Inventory inventory { get; set; } = new Inventory();
+    private InventoryViewModel inventory { get; set; } = new InventoryViewModel();
 
     public async Task Save() {
-        await AddInventoryUseCase.ExecuteAsync(inventory); 
+
+        var inv = new Inventory {
+            InventoryId = inventory.InventoryId,
+            InventoryName = inventory.InventoryName,    
+            Price = inventory.Price,
+            Quantity = inventory.Quantity
+        };
+
+        await AddInventoryUseCase.ExecuteAsync(inv); 
+
         NavigationManager.NavigateTo("/admin/view-inventories");
     }
 }

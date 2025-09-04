@@ -1,24 +1,27 @@
 using System;
 using System.Runtime.Versioning;
+using System.Threading.Tasks;
 using AP.CoreBusiness;
 using AP.UseCases.PluginInterfaces;
+using Microsoft.EntityFrameworkCore;
 
-namespace AP.Plugins.InMemory;
+namespace AP.Plugins.EFCoreSQL;
 
-public class InventoryTransactionRepository : IInventoryTransactionRepository
+public class InventoryTransactionEFCoreRepository : IInventoryTransactionRepository
 {
-    // Attributes
-    private List<InventoryTransaction> _inventoryTransactions = new();
-    private IInventoryRepository inventoryRepository;
+    private readonly IDbContextFactory<AppDbContext> contextFactory;
 
-    public InventoryTransactionRepository(IInventoryRepository inventoryRepository)
+    public InventoryTransactionEFCoreRepository(IDbContextFactory<AppDbContext> contextFactory)
     {
-        this.inventoryRepository = inventoryRepository;
+        this.contextFactory = contextFactory;
     }
 
     public async Task PurchaseAsync(string poNumber, Inventory inventory, int quantity, double price, string doneBy)
     {
-        this._inventoryTransactions.Add(new InventoryTransaction
+
+        using var db = this.contextFactory.CreateDbContext();
+
+        db.InventoryTransactions?.Add(new InventoryTransaction
         {
             PONumber = poNumber,
             InventoryId = inventory.InventoryId,
@@ -29,11 +32,15 @@ public class InventoryTransactionRepository : IInventoryTransactionRepository
             TransactionDate = DateTime.Now,
             DoneBy = doneBy,
         });
+
+        await db.SaveChangesAsync();
     }
 
     public async Task ProduceAsync(string productionNumber, Inventory inventory, int quantityToConsume, double price, string doneBy)
     {
-        this._inventoryTransactions.Add(new InventoryTransaction
+        using var db = this.contextFactory.CreateDbContext();
+
+        db.InventoryTransactions?.Add(new InventoryTransaction
         {
             ProductionNumber = productionNumber,
             InventoryId = inventory.InventoryId,
@@ -44,32 +51,20 @@ public class InventoryTransactionRepository : IInventoryTransactionRepository
             TransactionDate = DateTime.Now,
             DoneBy = doneBy,
         });
+
+        await db.SaveChangesAsync();
     }
 
     public async Task<IEnumerable<InventoryTransaction>> SearchInventoryTransactionsAsync(string inventoryName, DateTime? dateFrom, DateTime? dateTo, InventoryTransactionType? transactionType)
     {
-        // Get all inventories by inventory name
-        var inventories = (await this.inventoryRepository.GetInventoriesByNameAsync(string.Empty)).ToList();
+        using var db = this.contextFactory.CreateDbContext();
 
-        var query = from it in this._inventoryTransactions
-                    join inv in inventories on it.InventoryId equals inv.InventoryId
+        var query = from it in db.InventoryTransactions
+                    join inv in db.Inventories on it.InventoryId equals inv.InventoryId
                     where
                         (string.IsNullOrWhiteSpace(inventoryName) || inv.InventoryName.ToLower().IndexOf(inventoryName.ToLower()) >= 0) && (!dateFrom.HasValue || it.TransactionDate >= dateFrom.Value.Date) && (!dateTo.HasValue || it.TransactionDate <= dateTo.Value.Date) && (!transactionType.HasValue || it.ActivityType == transactionType.Value)
-                    select new InventoryTransaction
-                    {
-                        Inventory = inv,
-                        InventoryTransactionId = it.InventoryTransactionId,
-                        PONumber = it.PONumber,
-                        ProductionNumber = it.ProductionNumber,
-                        InventoryId = it.InventoryId,
-                        QuantityBefore = it.QuantityBefore,
-                        QuantityAfter = it.QuantityAfter,
-                        ActivityType = it.ActivityType,
-                        TransactionDate = it.TransactionDate,
-                        DoneBy = it.DoneBy,
-                        UnitPrice = it.UnitPrice
-                    };
+                    select it;
 
-        return query;
+        return await query.Include(x => x.Inventory).ToListAsync();
     }
 }

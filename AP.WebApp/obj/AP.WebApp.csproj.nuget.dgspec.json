@@ -89,6 +89,9 @@
             "projectReferences": {
               "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj": {
                 "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.CoreBusiness/AP.CoreBusiness.csproj"
+              },
+              "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj": {
+                "projectPath": "/Users/haydenswift/Desktop/new-projects/AdventurePantry/AP.UseCases/AP.UseCases.csproj"
               }
             }
           }

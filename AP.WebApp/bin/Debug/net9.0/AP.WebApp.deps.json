@@ -1023,6 +1023,7 @@
       "AP.Plugins.EFCoreSQL/1.0.0": {
         "dependencies": {
           "AP.CoreBusiness": "1.0.0",
+          "AP.UseCases": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
         },
