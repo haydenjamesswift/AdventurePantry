@@ -1,6 +1,6 @@
 ﻿@page "/admin/view-inventories"
 @layout AdminLayout
-
+@attribute [Authorize]
 
 @using AP.CoreBusiness
 @using AP.UseCases
@@ -10,6 +10,7 @@
 @using AP.WebApp.Sections.Pages.Admin.Components
 @using AP.WebApp.Sections.Pages.Admin.Components.InventoryComponents
 @using AP.WebApp.Sections.Pages.Admin.Components.SearchComponents
+@using Microsoft.AspNetCore.Authorization
 
 @inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
 
